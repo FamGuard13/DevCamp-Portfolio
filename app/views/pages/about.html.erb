@@ -1,118 +1,111 @@
 <div class="app-card-container">
-    <div class="card">
+  <div class="card">
+      
+    <div class="row">
+      <div class="col-lg-4">
+        <%= image_tag "profile.jpg", width: 300, alt: "Profile Image", class: "about-me-center"%>
         
-        <div class="row">
-            <div class="col-lg-4">
-                <%= image_tag "profile.jpg", width: 300, alt: "Profile Image", class: "about-me-center"%>
-                
-                <div class="skills">
-                    <% @skills.each do |skill| %>
-                        <div class="skill">
-                            <h4><%= skill.title %></h4>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped bg-warning"
-                                    role="progress-bar"
-                                    aria-valuenow= <% skill.percent_utilized %>
-                                    aria-valuemax="100"
-                                    style="width: <%= skill.percent_utilized %>%"
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    <% end %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning"
+                    role="progress-bar"
+                    aria-valuenow= <% skill.percent_utilized %>
+                    aria-valuemax="100"
+                    style="width: <%= skill.percent_utilized %>%"
+                    >
                 </div>
+              </div>
             </div>
-
-            
-            <div class="col-lg-8">
-                        <span class="about-me-center"><h1>About Me</h1></span>
-                <p>
-                    With over a decade of development experience in a number of industries I realized that the typical product creation process between clients and developers was flawed. All too often developers rarely communicate to clients throughout the development stage, resulting in a final product that fails to reach the goal sought by the customer and end user.
-                </p>
-                
-                <p>
-                   For this reason I decided to utilize a completely different development pattern that focuses on highly focused communication and transparent design patterns. When I take on a project not only do I work to craft the application according to the client's specifications, I give daily updates to ensure that the project is aligning properly with the client's goals. The end result is the right product, delivered on time, and on budget. 
-                </p>
-                
-                <p>
-                    <button 
-                        class="btn btn-primary"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#jobHistory"
-                        aria-expanded="false"
-                        aria-controler="jobHistory"
-                    >
-                        Job History
-                    </button>
-
-                    <button 
-                        class="btn btn-primary"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#education"
-                        aria-expanded="false"
-                        aria-controler="education"
-                    >
-                        Education
-                    </button>
-                
-                    <button 
-                        class="btn btn-primary"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#press"
-                        aria-expanded="false"
-                        aria-controler="press"
-                    >
-                        Press
-                    </button>
-                </p>
-
-                <p>
-                    <div class="collapse" id="jobHistory">
-                    <div class="card card-body">
-                        Job1
-                    </div>
-                    
-                    <div class="card card-body">
-                        Job2
-                    </div>
-                    <div class="card card-body">
-                        Job3
-                    </div>
-                    </div>
-
-                
-
-                    <div class="collapse" id="education">
-                    <div class="card card-body">
-                        Edu1
-                    </div>
-                    
-                    <div class="card card-body">
-                        Edu2
-                    </div>
-                    <div class="card card-body">
-                        Edu3
-                    </div>
-                    </div>
-
-                    <div class="collapse" id="press">
-                    <div class="card card-body">
-                        Press1
-                    </div>
-                    
-                    <div class="card card-body">
-                        Press2
-                    </div>
-                    <div class="card card-body">
-                        Press3
-                    </div>
-                    </div>
-                </p>
-                
-            </div>
+          <% end %>
         </div>
+      </div>
+
+      
+      <div class="col-lg-8">
+        <span class="about-me-center"><h1>About Me</h1></span>
+          <p>
+              With over a decade of development experience in a number of industries I realized that the typical product creation process between clients and developers was flawed. All too often developers rarely communicate to clients throughout the development stage, resulting in a final product that fails to reach the goal sought by the customer and end user.
+          </p>
+          
+          <p>
+              For this reason I decided to utilize a completely different development pattern that focuses on highly focused communication and transparent design patterns. When I take on a project not only do I work to craft the application according to the client's specifications, I give daily updates to ensure that the project is aligning properly with the client's goals. The end result is the right product, delivered on time, and on budget. 
+          </p>
+          
+          <p>
+            <button 
+              class="btn btn-primary"
+              type="button"
+              data-toggle="collapse"
+              data-target="#jobHistory"
+              aria-expanded="false"
+              aria-controler="jobHistory">
+
+              Job History
+
+            </button>
+
+            <button 
+              class="btn btn-primary"
+              type="button"
+              data-toggle="collapse"
+              data-target="#education"
+              aria-expanded="false"
+              aria-controler="education">
+
+              Education
+
+            </button>
+          </p>
+
+          <p>
+            <div class="collapse" id="jobHistory">
+              <div class="card card-body">
+                  Job1
+              </div>
+              
+              <div class="card card-body">
+                  Job2
+              </div>
+
+              <div class="card card-body">
+                  Job3
+              </div>
+
+            </div>
+
+        
+
+            <div class="collapse" id="education">
+              <div class="card card-body">
+                  Edu1
+              </div>
+            
+              <div class="card card-body">
+                  Edu2
+              </div>
+              <div class="card card-body">
+                  Edu3
+              </div>
+            </div>
+
+            <div class="collapse" id="press">
+              <div class="card card-body">
+                  Press1
+              </div>
+              
+              <div class="card card-body">
+                  Press2
+              </div>
+
+              <div class="card card-body">
+                  Press3
+              </div>
+            </div>
+          </p>
+      </div>
     </div>
+  </div>
 </div>
