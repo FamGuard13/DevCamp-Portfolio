@@ -254,8 +254,28 @@ h6, .h6 {
 }
 
 .skill {
-  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-card {
   margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.contact-card > .card-body {
+  padding: 10px;
+}
+
+.edu-logo {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.section {
+  margin-bottom: 15px;
 }
 
 @media (max-width: 992px) { 

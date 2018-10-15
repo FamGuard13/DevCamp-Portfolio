@@ -2,44 +2,94 @@
   <div class="card">
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-sm-6">
 
-      <h4>Education</h4>
+      <h4>Work History</h4>
 
-        <div class='card'>
-          <div class='card-body'>
-            <p>Call or Text: <%= number_to_phone "3852294959" %></p>
+        <div class='card contact-card'>
+            <div class='card-body'>
+              <div class="row">
+                <div class="col-sm-4">
+                  <h4 class="edu-logo">Freelance</h4>
+                </div>
 
-            <p>Email: Harmtan2@gmail.com</p>
-
-            <p>Facebook: Message</p>
-
-            <p>LinkedIn: Message</p>
+                <div class="col-sm-8">
+                  <p>Nov 2017 - Current | President/Owner</p>
+                  <div>Create websites and webapps for clients</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <br>
+          <div class='card contact-card'>
+            <div class='card-body'>
+              <div class="row">
+                <div class="col-sm-4">
+                  <%= image_tag "family_guard_logo.png", width: 100, alt: "Salt Lake Community College Logo", class: "edu-logo"%>
+                </div>
 
-        <h4>Work History</h4>
+                <div class="col-sm-8">
+                  <p>Nov 2014 - Nov 2017 | President/Owner</p>
+                  <div>Sell, run, and maintain overall status of the company and clients</div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div class='card'>
-          <div class='card-body'>
-            <p>Call or Text: <%= number_to_phone "3852294959" %></p>
+          <div class='card contact-card'>
+            <div class='card-body'>
+              <div class="row">
+                <div class="col-sm-4">
+                  <%= image_tag "tmo_logo.png", width: 50, alt: "Salt Lake Community College Logo", class: "edu-logo"%>
+                </div>
 
-            <p>Email: Harmtan2@gmail.com</p>
+                <div class="col-sm-8">
+                  <p>May 2013 - Aug 2014 | Apr 2015 - Mar 2017</p>
+                  <div>Sell and assist with phones, tablets, accessories, and cell service</div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <p>Facebook: Message</p>
+      <div class="section">
+        <h4>Education</h4>
 
-            <p>LinkedIn: Message</p>
+          <div class='card contact-card'>
+            <div class='card-body'>
+              <div class="row">
+                <div class="col-sm-4">
+                  <%= image_tag "slcc_logo.png", width: 100, alt: "Salt Lake Community College Logo", class: "edu-logo"%>
+                </div>
+
+                <div class="col-sm-8">
+                  <p>Working for a Bussiness Associate Degree/Computer Science Degree</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class='card contact-card'>
+            <div class='card-body'>
+              <div class="row">
+                <div class="col-sm-4">
+                  <%= image_tag "bottega.png", width: 100, alt: "Bottega Bootcamp Logo", class: "edu-logo"%>
+                </div>
+
+                <div class="col-sm-8">
+                  <div>Certificate of Completions - 2018</div>
+                  <div>Full-Stack-Web Engineer</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-sm-6">
 
       <h4>Skillset</h4>
 
-        <div class='card'>
+        <div class='card section'>
           <div class='card-body'>
             <div class="skills">
               <% @skills.each do |skill| %>
@@ -59,20 +109,18 @@
             </div>
           </div>
         </div>
-
-        <br>
         
         <h4>Get in Touch</h4>
 
         <div class='card'>
           <div class='card-body'>
-            <p>Call or Text: <%= number_to_phone "3852294959" %></p>
+            <p><b>Call or Text: </b><%= number_to_phone "3852294959" %></p>
 
-            <p>Email: Harmtan2@gmail.com</p>
+            <p><b>Email: </b>Harmtan2@gmail.com</p>
 
-            <p>Facebook: Message</p>
+            <p><b>Facebook: </b>Message</p>
 
-            <p>LinkedIn: Message</p>
+            <p><b>LinkedIn: </b>Message</p>
           </div>
         </div>
 
