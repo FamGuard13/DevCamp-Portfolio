@@ -31,7 +31,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   font-family: 'Lato', sans-serif;
 }
 body {
@@ -216,6 +215,11 @@ h6, .h6 {
   transform: translateX(-50%) translateY(-50%);
   background: image-url('idea.jpg') no-repeat;
   background-size: cover;
+}
+
+.intro {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 50px;
 }
 
 .app-footer {
