@@ -1,22 +1,82 @@
 <div class="app-card-container">
-    <div class="card">
-        <h1>Lets Build Something Great Together!</h1>
-        
-        <hr>
-        
-        <div class="row">
-            <div class="col-md-4">
-        
-                <p><%= number_to_phone "8018106678" %></p>
-                
-                <p><%= number_to_currency "8008" %></p>
-                
-                <p><%= number_with_delimiter "800524121568" %></p>
-             </div>
-             
-             <div class="col-md-8">   
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.1810226412745!2d-111.93780178450601!3d40.47126007935881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752816997651181%3A0x3658f86072fa10c6!2s1575+Seattle+Slue+Dr%2C+Bluffdale%2C+UT+84065!5e0!3m2!1sen!2sus!4v1514922582058" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-             </div>
+  <div class="card">
+
+    <div class="row">
+      <div class="col-md-6">
+
+      <h4>Education</h4>
+
+        <div class='card'>
+          <div class='card-body'>
+            <p>Call or Text: <%= number_to_phone "3852294959" %></p>
+
+            <p>Email: Harmtan2@gmail.com</p>
+
+            <p>Facebook: Message</p>
+
+            <p>LinkedIn: Message</p>
+          </div>
         </div>
+
+        <br>
+
+        <h4>Work History</h4>
+
+        <div class='card'>
+          <div class='card-body'>
+            <p>Call or Text: <%= number_to_phone "3852294959" %></p>
+
+            <p>Email: Harmtan2@gmail.com</p>
+
+            <p>Facebook: Message</p>
+
+            <p>LinkedIn: Message</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+
+      <h4>Skillset</h4>
+
+        <div class='card'>
+          <div class='card-body'>
+            <div class="skills">
+              <% @skills.each do |skill| %>
+                <div class="skill">
+                  <h6><%= skill.title %></h6>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning"
+                    role="progress-bar"
+                    aria-valuenow= <% skill.percent_utilized %>
+                    aria-valuemax="100"
+                    style="width: <%= skill.percent_utilized %>%"
+                    >
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        
+        <h4>Get in Touch</h4>
+
+        <div class='card'>
+          <div class='card-body'>
+            <p>Call or Text: <%= number_to_phone "3852294959" %></p>
+
+            <p>Email: Harmtan2@gmail.com</p>
+
+            <p>Facebook: Message</p>
+
+            <p>LinkedIn: Message</p>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
 </div>
