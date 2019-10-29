@@ -23,6 +23,5 @@ module DevcampPortfolio
     config.eager_load_paths << "#{Rails.root}/lib"
     config.secret_key_base = ENV["SECRET_KEY_BASE"]
     config.generators.javascript_engine = :js
-    config.assets.css_compressor = false
   end
 end
