@@ -36,12 +36,17 @@ module ApplicationHelper
     DevcampViewTool::Renderer.copyright 'Tanner Harman', 'All rights reserved'
   end
 
-  def nav_items
+  def logo_link
     [
       {
         url: root_path,
-        title: 'Home'
-      },
+        title: 'Tanner Harman'
+      }
+    ]
+  end
+
+  def nav_items
+    [
       {
         url: about_me_path,
         title: 'About Me'
@@ -57,10 +62,10 @@ module ApplicationHelper
     ]
   end
 
-  def nav_helper(tag_type, style='')
+  def nav_helper(tag_type, links, style='')
     nav_links = ''
 
-    nav_items.each do |item|
+    links.each do |item|
       nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
     end
 
