@@ -6,8 +6,96 @@ header {
 
 nav {
   display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
 }
 
-.active {
-  color: blue;
+nav ul {
+  display: flex;
+}
+
+nav li,
+nav h3 {
+  list-style: none;
+  margin: 10px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav .active {
+  border-bottom: 2px solid black;
+}
+
+@media screen and (max-width: 800px) {
+  nav,
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  header {
+    top: none;
+    bottom: 0;
+    flex-direction: column-reverse;
+    background-color: transparent;
+  }
+
+  nav {
+    position: relative;
+
+    margin-bottom: -225px;
+    transition: 150ms transform;
+    z-index: -1;
+  }
+
+  .show {
+    transform: translateY(-225px);
+  }
+
+  nav a {
+    margin: 0;
+    padding: 10px 0px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  nav a:hover,
+  .bar .mobile-menu:hover,
+  .bar a:hover {
+    color: black;
+    background: white;
+    border: none;
+  }
+
+  header .bar {
+    width: 100%;
+    display: flex;
+    background: #FF6D3D;
+  }
+
+  .bar a {
+    width: 100%;
+  }
+
+  .bar a img {
+    margin-right: -46px;
+  }
+  
+  .bar .mobile-menu {
+    display: block;
+    font-size: 30px;
+    padding: 10px;
+    margin: 0px;
+    height: 100%;
+    width: 54px;
+    cursor: pointer;
+  }
 }
