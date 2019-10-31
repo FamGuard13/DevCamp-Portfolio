@@ -1,7 +1,10 @@
 <nav>
-  <%= nav_helper('h3', logo_link, 'logo')%>
-  <ul class='nav-up'>     
-    <%= nav_helper('li', nav_items)%>
+  <div class="nav-bar">
+    <%= nav_helper('h3', logo_link, 'logo')%>
+    <%= content_tag(:div, fa_icon("bars"), id:'menu-button')%>
+  </div>
+  <ul class='nav-items'>     
+    <%= nav_helper('li', nav_items, 'nav-link')%>
     <%= login_helper %>
   </ul>
 </nav>

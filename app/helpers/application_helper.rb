@@ -62,11 +62,11 @@ module ApplicationHelper
     ]
   end
 
-  def nav_helper(tag_type, links, style='')
+  def nav_helper(tag_type, links, style)
     nav_links = ''
 
     links.each do |item|
-      nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+      nav_links << "<#{tag_type} class='#{style}'><a href='#{item[:url]}' class='#{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
     end
 
     nav_links.html_safe
