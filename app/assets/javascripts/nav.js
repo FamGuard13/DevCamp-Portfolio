@@ -1,5 +1,3 @@
-console.log('hellow');
-
 const nav = document.querySelector('.nav-items');
 const menuButton = document.querySelector('#menu-button');
 
