@@ -51,14 +51,21 @@ module ApplicationHelper
         url: about_me_path,
         title: 'About Me'
       },
+
       {
         url: contact_path,
-        title: 'Contact'
+        title: 'Qualifications'
       },
+
       {
         url: portfolios_path,
         title: 'Portfolio'
       },
+
+      {
+        url: contact_path,
+        title: 'Contact'
+      }
     ]
   end
 

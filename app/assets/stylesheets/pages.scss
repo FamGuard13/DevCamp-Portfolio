@@ -2,7 +2,135 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.intro {
+section {
     width: 100%;
     min-height: 80vh
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  justify-items: center;
+  height: 100vh;
+  background-color: #5F259F;
+  color: white;
+}
+
+.intro::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  --linear-percentage: 65%;
+  background: linear-gradient(
+              rgba(0, 0, 0, .1) var(--linear-percentage), 
+              rgba(0,0,0, .6));
+  z-index: 0;
+}
+
+.intro img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.intro h1 {
+  text-align: center;
+  min-width: 377.0666667px;
+  margin: 0 15px 15px;
+  font-size: 68px;
+  z-index: 1;
+  align-self: end;
+}
+
+.intro p {
+  width: 75%;
+  font-size: 25px;
+  z-index: 1;
+}
+
+@media screen and (min-width: 601px) and (max-width: 990px) {
+  nav .nav-items {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  nav .nav-items > .nav-link {
+    flex: 150px 1 1;
+    margin: 10px 0;
+  }
+
+  .intro h1 {
+    font-size: 50px;
+  }
+
+  .intro p {
+    font-size: 20px;
+    margin-bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 601px) and (orientation: portrait) {
+  :root {
+    overflow-x: hidden;
+    --transform-shift: -100vw;
+  }
+
+  main {
+    display: flex;
+    justify-content: flex-start;
+    transform: translateX(var(--transform-shift));
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: calc(100vh - 48.0833px);
+  }
+
+  .intro h1 {
+    position: fixed;
+    top: 2vh;
+    color: black;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro p {
+    margin-top: 15px;
+    font-size: 16px;
+    align-self: center;
+  }
+
+  nav .nav-items,
+  .intro h1,
+  main section {
+    min-width: 100px; 
+    flex-shrink: 0;
+  }
+
+  header {
+    bottom: 0;
+    background: #333333;
+    overflow: hidden;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav > .nav-items {
+    justify-content: flex-start;
+  }
+
+  .nav-items > .nav-link,
+  .nav-bar {
+    width: 100vw;
+    flex-shrink: 0;
+    text-align: center;
+    transform: translateX(var(--transform-shift));
+  }
 }
