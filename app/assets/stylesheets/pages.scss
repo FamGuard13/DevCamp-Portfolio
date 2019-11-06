@@ -14,6 +14,7 @@ section {
   height: 100vh;
   background-color: #5F259F;
   color: white;
+  position: relative;
 }
 
 .intro::after {
@@ -74,20 +75,21 @@ section {
 
 @media screen and (max-width: 601px) and (orientation: portrait) {
   :root {
-    overflow-x: hidden;
-    --transform-shift: -100vw;
+    --transform-shift: 00vw;
   }
 
   main {
     display: flex;
     justify-content: flex-start;
-    transform: translateX(var(--transform-shift));
+    overflow: hidden;
+    width: 100%;
   }
 
   .intro {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    height: calc(100vh - 48.0833px);
+    height: calc(100vh - 48px);
+    transform: translateX(var(--transform-shift));
   }
 
   .intro h1 {
