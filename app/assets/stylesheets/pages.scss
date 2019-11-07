@@ -7,7 +7,7 @@ section {
     min-height: 80vh
 }
 
-.intro {
+.home-section {
   display: grid;
   grid-template-columns: 5fr 4fr;
   justify-items: center;
@@ -75,7 +75,7 @@ section {
 
 @media screen and (max-width: 601px) and (orientation: portrait) {
   :root {
-    --transform-shift: 00vw;
+    --transform-shift: -100vw;
   }
 
   main {
@@ -85,14 +85,14 @@ section {
     width: 100%;
   }
 
-  .intro {
+  .home-section {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: calc(100vh - 48px);
     transform: translateX(var(--transform-shift));
   }
 
-  .intro h1 {
+  .home-section h1 {
     position: fixed;
     top: 2vh;
     color: black;
@@ -101,14 +101,14 @@ section {
     text-align: center;
   }
 
-  .intro p {
+  .home-section p {
     margin-top: 15px;
     font-size: 16px;
     align-self: center;
   }
 
   nav .nav-items,
-  .intro h1,
+  .home-section h1,
   main section {
     min-width: 100px; 
     flex-shrink: 0;
