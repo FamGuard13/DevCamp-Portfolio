@@ -5,8 +5,9 @@
 @import "pages.scss";
 
 :root {
-  --transform-shift: 0vw;
+  --transform-shift:0vw;
   --nav-color: #333333;
+  --swipe-transition: 0ms;
 }
 
 * {

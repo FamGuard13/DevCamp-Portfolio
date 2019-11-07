@@ -1,12 +1,12 @@
 document.addEventListener('turbolinks:load', () => {
   const main = document.querySelector('main');
+  const homeSection = getComputedStyle(document.body).getPropertyValue('--transform-shift');
 
   let start = 0;
   let shift = 0;
-  let currentPosition = 0;
+  let currentPosition = Number(homeSection.split('').slice(0, -2).join(''));
   let viewWidth = 0;
   let newPosition = 0;
-
   
     main.addEventListener('touchstart', (e) => {
       start = e.touches[0].clientX;
@@ -36,6 +36,10 @@ document.addEventListener('turbolinks:load', () => {
         currentPosition = -400;
       }
   
-      document.documentElement.style.setProperty(`--transform-shift`, `${currentPosition}vw`)
+      document.documentElement.style.setProperty(`--transform-shift`, `${currentPosition}vw`);
+      document.documentElement.style.setProperty(`--swipe-transition`, `150ms`);
+      setTimeout(() => {
+        document.documentElement.style.setProperty(`--swipe-transition`, `0ms`);
+      }, 151);
     });
 });
