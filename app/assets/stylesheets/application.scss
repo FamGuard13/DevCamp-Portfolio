@@ -4,6 +4,11 @@
 @import "nav.scss";
 @import "pages.scss";
 
+:root {
+  --transform-shift: 0vw;
+  --nav-color: #333333;
+}
+
 * {
   padding: 0;
   margin: 0;

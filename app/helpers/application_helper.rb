@@ -94,4 +94,10 @@ module ApplicationHelper
   def alert_generator(msg)
     js add_gritter(msg, title: "Tanner Harman Portfolio", sticky: false)
   end
+
+  def home_page_menu
+    if current_page?('/')
+      "class = 'home-nav'".html_safe
+    end
+  end
 end

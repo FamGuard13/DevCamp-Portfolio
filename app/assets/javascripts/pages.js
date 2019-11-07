@@ -38,4 +38,4 @@ document.addEventListener('turbolinks:load', () => {
   
       document.documentElement.style.setProperty(`--transform-shift`, `${currentPosition}vw`)
     });
-})
+});

@@ -17,7 +17,7 @@ section {
   position: relative;
 }
 
-.intro::after {
+.home-section::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -29,15 +29,7 @@ section {
   z-index: 0;
 }
 
-.intro img {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.intro h1 {
+.home-section h1 {
   text-align: center;
   min-width: 377.0666667px;
   margin: 0 15px 15px;
@@ -46,6 +38,14 @@ section {
   align-self: end;
 }
 
+
+.intro img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .intro p {
   width: 75%;
   font-size: 25px;
@@ -74,10 +74,6 @@ section {
 }
 
 @media screen and (max-width: 601px) and (orientation: portrait) {
-  :root {
-    --transform-shift: -100vw;
-  }
-
   main {
     display: flex;
     justify-content: flex-start;
@@ -107,32 +103,42 @@ section {
     align-self: center;
   }
 
-  nav .nav-items,
+  .home-nav > nav .nav-items,
   .home-section h1,
   main section {
+    flex-direction: row;
     min-width: 100px; 
     flex-shrink: 0;
   }
 
-  header {
+  .home-nav {
     bottom: 0;
     background: #333333;
     overflow: hidden;
   }
 
-  nav {
+  .home-nav > nav {
     display: flex;
+    flex-direction: row;
   }
 
-  nav > .nav-items {
+  .home-nav nav > .nav-items {
     justify-content: flex-start;
   }
 
-  .nav-items > .nav-link,
-  .nav-bar {
+  .home-nav > nav .nav-items > .nav-link,
+  .home-nav > nav .nav-bar {
     width: 100vw;
     flex-shrink: 0;
     text-align: center;
     transform: translateX(var(--transform-shift));
+  }
+
+  .home-nav .nav-bar i {
+    display: none;
+  }
+
+  .home-nav .logo {
+    margin-right: 0px;
   }
 }
