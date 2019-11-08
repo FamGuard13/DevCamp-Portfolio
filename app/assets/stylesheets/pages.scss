@@ -63,7 +63,7 @@ section {
   object-fit: cover;
 }
 
-.home-section .content{
+.home-section .content {
   width: 75%;
   font-size: 25px;
   z-index: 1;
@@ -138,14 +138,17 @@ section {
   }
 
   .home-section .content {
-    // margin-top: 15px;
     font-size: 16px;
     align-self: center;
     grid-row: 3/-1;
+    width: 90%;
+  }
+
+  .home-section .content p {
+    width: 100%;
     background: rgba(0,0,0, .8);
     padding: 10px;
     border-radius: 10px;
-    width: 90%;
   }
 
   .home-section .section-title,
@@ -154,6 +157,13 @@ section {
     min-width: 100px; 
     flex-shrink: 0;
    }
+
+   .portfolio .section-title {
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, .9),
+                                rgba(0, 0, 0, 0));
+   }
+
   // Home-Page Slider Nav
 
   .home-nav {

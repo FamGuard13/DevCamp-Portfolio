@@ -19,9 +19,9 @@ module ApplicationHelper
     markdown_to_html.render(text).html_safe
   end
   
-  def login_helper style = ''
+  def login_helper
     if !current_user.is_a?(GuestUser)
-      content_tag(:li, link_to("Logout", destroy_user_session_path, method: :delete, class: style))
+      content_tag(:li, link_to("Logout", destroy_user_session_path, method: :delete))
     end
   end
 
