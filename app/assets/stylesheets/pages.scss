@@ -62,7 +62,8 @@ section {
   width: 100%;
   object-fit: cover;
 }
-.home-section .content {
+
+.home-section .content{
   width: 75%;
   font-size: 25px;
   z-index: 1;
@@ -137,7 +138,7 @@ section {
   }
 
   .home-section .content {
-    margin-top: 15px;
+    // margin-top: 15px;
     font-size: 16px;
     align-self: center;
     grid-row: 3/-1;
@@ -153,7 +154,6 @@ section {
     min-width: 100px; 
     flex-shrink: 0;
    }
-
   // Home-Page Slider Nav
 
   .home-nav {
