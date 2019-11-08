@@ -14,6 +14,8 @@ section {
   height: 100vh;
   color: white;
   background-color: #5F259F;
+  position: relative;
+  grid-row-gap: 1.5625vw;
 }
 
 .home-section::after {
@@ -27,23 +29,40 @@ section {
               rgba(0,0,0, .6));
 }
 
-.home-section h1 {
+.home-section .section-title {
   text-align: center;
   min-width: 377.0666667px;
-  margin: 0 15px 15px;
-  font-size: 68px;
+  font-size: 45px;
+  height: 100%;
+  width: 100%;
   z-index: 1;
   align-self: end;
+
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
+.home-section .section-title h1 {
+  font-size: 45px;
+  padding: 0;
+  margin: 0;
+}
+
+.home-section .section-title h2 {
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 .home-section img {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   object-fit: cover;
 }
-.home-section p {
+.home-section .content {
   width: 75%;
   font-size: 25px;
   z-index: 1;
@@ -60,17 +79,17 @@ section {
     margin: 10px 0;
   }
 
-  .home-section h1 {
+  .home-section .section-title {
     font-size: 50px;
   }
 
-  .intro p {
+  .home-section .content {
     font-size: 20px;
     margin-bottom: 150px;
   }
 }
 
-@media screen and (max-width: 601px) and (orientation: portrait) {
+@media screen and (max-width: 600px) and (orientation: portrait) {
   main {
     display: flex;
     justify-content: flex-start;
@@ -80,34 +99,62 @@ section {
 
   .home-section {
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 3fr 4fr;
+    grid-template-rows: 1.5fr 3fr 4fr;
     height: 100vh;
     padding-bottom: 80px;
     transform: translateX(var(--transform-shift));
     transition: transform var(--swipe-transition) ease-in;
+    place-items: center;
   }
 
-  .home-section h1 {
-    position: fixed;
-    top: 0;
+  .home-section::after {
+    --linear-percentage: 0;
+  }
+
+  .home-section img {
+    position: absolute;
+    grid-row: auto;
+    height: 100%;
+    width: 100%;
+  }
+
+  .home-section .section-title,
+  .home-section .section-title h1 {
     color: black;
     font-size: 25px;
     width: 100%;
     text-align: center;
   }
 
-  .home-section p {
+  .home-section .section-title {
+    background: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0));
+    padding: 10px;
+    padding-bottom: 50px;
+  }
+  
+  .home-section .section-title h2 {
+    font-size: 20px;
+  }
+
+  .home-section .content {
     margin-top: 15px;
     font-size: 16px;
     align-self: center;
+    grid-row: 3/-1;
+    background: rgba(0,0,0, .8);
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
   }
 
-  .home-section h1,
+  .home-section .section-title,
    main section {
     flex-direction: row;
     min-width: 100px; 
     flex-shrink: 0;
    }
+
+  // Home-Page Slider Nav
 
   .home-nav {
     bottom: 0;

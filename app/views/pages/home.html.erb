@@ -1,34 +1,33 @@
 <section class='intro home-section'>
   <%= image_tag('intro.jpg', alt: 'profile picture') %>
-
-  <h1>Welcome</h1>
   
-  <p>I appreciate you're time today. Here you'll find what I can do for {{Company-Name}}</p>
+  <div class="section-title">
+    <h1>Welcome!</h1>
+    <h2>Glad to have you here.</h2>
+  </div>
+  
+  <div class="content">
+    <p>I appreciate you're time today. Here you'll find all I have to offer {{Company-Name}}. Hope to speak with you soon!</p>
+  </div>
 </section>
 
 
-<section class="about home-section">
-  <%= image_tag('intro.jpg', alt: 'profile picture') %>
+<section class="about home-section" id='about'>
+  <%= image_tag('about.jpg', alt: 'profile picture') %>
 
-  <h1>About</h1>
+  <h1 class="section-title">Let me introduce myself.</h1>
 
-  <div class="hobbies">
-  
-  </div>
-
-  <div class="journey">
-  
-  </div>
-
-  <div class="bio">
-  
+  <div class="content">
+    <p>
+      The culture of {{Company-Name}} is important to productivity, quality, and ultimetly impact. So here, you'll see who I am and can evaluate if we're a good cultural fit together. You'll see where I've come from, what I like to do, and my journey through life that has brought me to where I am today.
+    </p>
   </div>
 </section>
 
 <section class="qualifications home-section">
   <%= image_tag('intro.jpg', alt: 'profile picture') %>
 
-  <h1>Qualifications</h1>
+  <h1 class="section-title">What I have to offer</h1>
 
   <div class="work-history">
 
@@ -44,9 +43,9 @@
 </section>
 
 <section class="portfolio home-section">
-  <%= image_tag('intro.jpg', alt: 'profile picture') %>
+  <%= image_tag('code-background.jpg', alt: 'profile picture') %>
 
-  <h1>Portfolio</h1>
+  <h1 class="section-title">Here's what I've built so far</h1>
 
   <div class="front-end">
 
@@ -60,7 +59,7 @@
 <section class="contact home-section">
   <%= image_tag('intro.jpg', alt: 'profile picture') %>
 
-  <h1>Contact</h1>
+  <h1 class="section-title">Let's Chat</h1>
 
   <div class="work-history">
 
