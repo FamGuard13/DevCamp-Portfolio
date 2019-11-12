@@ -7,6 +7,24 @@ section {
     min-height: 80vh;
 }
 
+.home-nav {
+  bottom: 25px;
+}
+
+.home-nav nav {
+  display: grid;
+  grid-template-columns: 5fr minmax(380px, 4fr);
+  width: 100%;
+  place-items: center;
+  justify-content: start;
+}
+
+.home-nav nav .nav-items {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
 .home-section {
   display: grid;
   justify-items: center;

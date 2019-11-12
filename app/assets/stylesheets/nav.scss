@@ -3,19 +3,17 @@ header {
   width: 100%;
   z-index: 2;
   color: #F2E9EA;
-  bottom: 25px;
 }
 
 nav {
-  display: grid;
-  grid-template-columns: 5fr minmax(380px, 4fr);
+  display: flex;
   width: 100%;
-  place-items: center;
+  align-items: center;
+  justify-content: space-around;
 }
 
 nav .nav-items {
   display: flex;
-  width: 100%;
   justify-content: space-evenly;
 }
 
@@ -97,13 +95,13 @@ nav .active {
     margin-right: -50px;
   }
 
-   .nav-bar i {
-     display: block;
-     font-size: 25px;
-     margin-right: 5px;
-   }
+  .nav-bar i {
+    display: block;
+    font-size: 25px;
+    margin-right: 5px;
+  }
 
-   .nav-items {
-     flex-direction: column-reverse;
-   }
+  .nav-items {
+    flex-direction: column-reverse;
+  }
 }
