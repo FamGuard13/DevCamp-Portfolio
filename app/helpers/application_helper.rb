@@ -40,7 +40,8 @@ module ApplicationHelper
     [
       {
         url: root_path,
-        title: 'Tanner Harman'
+        title: 'Tanner Harman',
+        data_tag: '.intro'
       }
     ]
   end
@@ -49,22 +50,26 @@ module ApplicationHelper
     [
       {
         url: about_me_path,
-        title: 'About Me'
+        title: 'About Me',
+        data_tag: '.about'
       },
 
       {
         url: contact_path,
-        title: 'Qualifications'
+        title: 'Qualifications',
+        data_tag: '.qualifications'
       },
 
       {
         url: portfolios_path,
-        title: 'Portfolio'
+        title: 'Portfolio',
+        data_tag: '.portfolio'
       },
 
       {
         url: contact_path,
-        title: 'Contact'
+        title: 'Contact',
+        data_tag: '.contact'
       }
     ]
   end
@@ -73,7 +78,7 @@ module ApplicationHelper
     nav_links = ''
 
     links.each do |item|
-      nav_links << "<#{tag_type} class='#{style}'><a href='#{item[:url]}' class='#{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+      nav_links << "<#{tag_type} class='#{style}' data-tag='#{item[:data_tag]}'><a href='#{item[:url]}' class='#{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
     end
 
     nav_links.html_safe

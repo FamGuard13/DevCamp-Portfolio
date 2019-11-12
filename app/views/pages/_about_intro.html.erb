@@ -1,11 +1,15 @@
 <section class="about home-section" id='about'>
   <%= image_tag('about.jpg', alt: 'profile picture') %>
 
-  <h1 class="section-title">Let me introduce myself.</h1>
+  <div class="section-wrapper">
+    <h1 class="section-title">Let me introduce myself.</h1>
 
-  <div class="content">
-    <p>
-      The culture of {{Company-Name}} is important to productivity, quality, and ultimetly impact. So here, you'll see who I am and can evaluate if we're a good cultural fit together. You'll see where I've come from, what I like to do, and my journey through life that has brought me to where I am today.
-    </p>
+    <div class="content">
+      <p>
+        The culture of {{Company-Name}} is important to productivity, quality, and ultimetly impact. So here, you'll see who I am and can evaluate if we're a good cultural fit together. You'll see where I've come from, what I like to do, and my journey through life that has brought me to where I am today.
+      </p>
+    </div>
   </div>
+
+  <%= link_to(content_tag(:button,"Discover More"), about_me_path, class: 'button')%>
 </section>

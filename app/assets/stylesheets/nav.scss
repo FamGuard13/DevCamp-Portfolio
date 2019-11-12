@@ -8,7 +8,7 @@ header {
 
 nav {
   display: grid;
-  grid-template-columns: 5fr 4fr;
+  grid-template-columns: 5fr minmax(380px, 4fr);
   width: 100%;
   place-items: center;
 }
@@ -16,7 +16,6 @@ nav {
 nav .nav-items {
   display: flex;
   width: 100%;
-  min-width: 407.0666667px;
   justify-content: space-evenly;
 }
 
@@ -38,6 +37,10 @@ nav a {
 nav a:hover,
 nav .active {
   color: white;
+}
+
+.navbar {
+  text-align: center;
 }
 
 .nav-bar i {

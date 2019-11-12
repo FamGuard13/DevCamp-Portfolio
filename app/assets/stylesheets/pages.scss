@@ -4,18 +4,20 @@
 
 section {
     width: 100%;
-    min-height: 80vh
+    min-height: 80vh;
 }
 
 .home-section {
   display: grid;
-  grid-template-columns: 5fr 4fr;
   justify-items: center;
+  align-items: center;
+  align-content: center;
+  grid-template-columns: 5fr minmax(380px, 4fr);
+  grid-template-rows: repeat(2, 2fr) 1fr;
   height: 100vh;
   color: white;
   background-color: #5F259F;
   position: relative;
-  grid-row-gap: 1.5625vw;
 }
 
 .home-section::after {
@@ -29,14 +31,22 @@ section {
               rgba(0,0,0, .6));
 }
 
+.home-section .section-wrapper {
+  grid-row: 1 / -2;
+  display: grid;
+  grid-row-gap: 1.5625vw;
+  background: rgba(54, 69, 79, .8);
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: -5px 5px 10px rgba(0,0,0, .2);
+  margin: 0 15px;
+  z-index: 1;
+  width: 90%;
+}
+
 .home-section .section-title {
   text-align: center;
-  min-width: 377.0666667px;
-  font-size: 45px;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  align-self: end;
+  font-size: 2.5vw;
 
   display: grid;
   place-items: center;
@@ -44,29 +54,86 @@ section {
 }
 
 .home-section .section-title h1 {
-  font-size: 45px;
+  font-size: 2.5vw;
   padding: 0;
   margin: 0;
 }
 
 .home-section .section-title h2 {
-  font-size: 30px;
+  font-size: 1.875vw;
   padding: 0;
   margin: 0;
 }
 
 .home-section img {
   grid-column: 1 / 2;
-  grid-row: 1 / 3;
-  height: 100vh;
+  grid-row: 1 / -1;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
 .home-section .content {
-  width: 75%;
-  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  font-size: 1.5625vw;
+}
+
+.home-section .button button {
+  cursor: pointer;
+  padding: 10px 25px;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  box-shadow: -5px 5px 10px rgba(0,0,0, .2);
+  border: black;
+  height: 100%;
+  width: 100%;
   z-index: 1;
+}
+
+.home-section .button {
+  margin-bottom: 150px;
+  height: 50px;
+  border-radius: 50px;
+  z-index: 1;
+  grid-column: 2 / -1;
+  align-self: start;
+}
+
+@media screen and (max-width: 1244px) {
+  .home-section .section-title,
+  .home-section .section-title h1 {
+    font-size: 31.1px;
+  }
+
+  .home-section .section-title h2 {
+    font-size: 20px;
+  }
+
+  .home-section .content {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .home-section {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transition: opacity 350ms ease-in;
+  }
+
+  .about,
+  .qualifications,
+  .portfolio,
+  .contact {
+    opacity: 0;
+    z-index: 0;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 990px) {
@@ -78,15 +145,6 @@ section {
   nav .nav-items > .nav-link {
     flex: 150px 1 1;
     margin: 10px 0;
-  }
-
-  .home-section .section-title {
-    font-size: 50px;
-  }
-
-  .home-section .content {
-    font-size: 20px;
-    margin-bottom: 150px;
   }
 }
 
@@ -100,16 +158,28 @@ section {
 
   .home-section {
     grid-template-columns: 1fr;
-    grid-template-rows: 1.5fr 3fr 4fr;
     height: 100vh;
     padding-bottom: 80px;
     transform: translateX(var(--transform-shift));
     transition: transform var(--swipe-transition) ease-in;
     place-items: center;
+    grid-template-rows: 10fr 5fr auto;
   }
 
   .home-section::after {
     --linear-percentage: 0;
+  }
+
+  .home-section .section-wrapper {
+    grid-row-end: -2;
+    align-self: end;
+    padding: 10px;
+  }
+
+  .home-section .button {
+    grid-row-end: -1;
+    display: none;
+    margin-bottom: 0;
   }
 
   .home-section img {
@@ -128,9 +198,13 @@ section {
   }
 
   .home-section .section-title {
+    position: fixed;
+    top: 0;
+    left: 0;
     background: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0));
     padding: 10px;
     padding-bottom: 50px;
+    box-shadow: none;
   }
   
   .home-section .section-title h2 {
@@ -141,14 +215,11 @@ section {
     font-size: 16px;
     align-self: center;
     grid-row: 3/-1;
-    width: 90%;
+    width: 100%;
   }
 
   .home-section .content p {
     width: 100%;
-    background: rgba(0,0,0, .8);
-    padding: 10px;
-    border-radius: 10px;
   }
 
   .home-section .section-title,

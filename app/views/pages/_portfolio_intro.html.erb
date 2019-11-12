@@ -1,16 +1,15 @@
 <section class="portfolio home-section" id='portfolio'>
   <%= image_tag('code-background.jpg', alt: 'profile picture') %>
 
-  <h1 class="section-title">What I've built</h1>
+<div class="section-wrapper">
+    <h1 class="section-title">What I've built</h1>
 
-  <div class="content">
-    <p>
-      My portfolio consists of a number of projects that showcase my skill set in relation to my Web Development skills. These range from Education projects, Personal Projects, & Freelance work. 
-    </p>
-    <br>
-
-    <p>
-      I have built a number of projects using raw HTML, CSS, & Javascript without frameworks. This was done with the purpose of gaining a foundation of knowledge in which to build on. On top of that, I am fluent in both Ruby & the Rails framework for Full-Stack applications. 
-    </p>
+    <div class="content">
+      <p>
+        I have built a number of projects using raw HTML, CSS, & Javascript without frameworks. This was done with the purpose of gaining a foundation of knowledge in which to build on. On top of that, I am fluent in both Ruby & the Rails framework for Full-Stack applications. 
+      </p>
+    </div>
   </div>
+
+  <%= link_to(content_tag(:button,"Discover More"), about_me_path, class: 'button')%>
 </section>
