@@ -51,6 +51,8 @@ document.addEventListener('turbolinks:load', () => {
     navLink.forEach(link =>  {
       link.addEventListener('mouseenter', transitionPage)
     })
+
+    window.addEventListener('resize', resetOpacity);
   }
  
   function transitionPage() {
@@ -65,6 +67,18 @@ document.addEventListener('turbolinks:load', () => {
     menuSection.style.setProperty('opacity', '1');
     menuSection.style.setProperty('z-index', '0');
   }
+
+  function resetOpacity() {
+    const homeSections = document.querySelectorAll('.home-section');
+
+    if (window.innerWidth < 601) {
+      homeSections.forEach(section => {
+        section.style.setProperty('opacity', '1');
+        section.style.setProperty('z-index', '1');
+      })
+    }
+  }
+
   mobileSwipe();
   desktopHover();
 });
