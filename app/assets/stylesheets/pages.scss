@@ -146,18 +146,13 @@ section {
     flex: 150px 1 1;
     margin: 10px 0;
   }
+
+  .home-section .button {
+    margin-bottom: 170px;
+  }
 }
 
 @media screen and (max-width: 600px) and (orientation: portrait) {
-  .intro,
-  .about,
-  .qualifications,
-  .portfolio,
-  .contact {
-    opacity: 1;
-    z-index: 1;
-  }
-
   main {
     display: flex;
     justify-content: flex-start;
