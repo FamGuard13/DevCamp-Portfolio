@@ -9,6 +9,9 @@ section {
 
 .home-nav {
   bottom: 25px;
+  background-color: transparent;
+  box-shadow: none;
+  height: auto;
 }
 
 .home-nav nav {
@@ -114,7 +117,7 @@ section {
 }
 
 .home-section .button {
-  margin-bottom: 150px;
+  margin-bottom: 20vh;
   height: 50px;
   border-radius: 50px;
   z-index: 1;
@@ -137,7 +140,7 @@ section {
   }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 651px) {
   .home-section {
     position: fixed;
     top: 0;
@@ -154,23 +157,23 @@ section {
   }
 }
 
-@media screen and (min-width: 601px) and (max-width: 990px) {
-  nav .nav-items {
+@media screen and (min-width: 651px) and (max-width: 990px) {
+  .home-nav nav .nav-items {
     flex-wrap: wrap;
     text-align: center;
   }
 
-  nav .nav-items > .nav-link {
+  .home-nav nav .nav-items > .nav-link {
     flex: 150px 1 1;
     margin: 10px 0;
   }
 
   .home-section .button {
-    margin-bottom: 170px;
+    margin-bottom: 20vh;
   }
 }
 
-@media screen and (max-width: 600px) and (orientation: portrait) {
+@media screen and (max-width: 650px) and (orientation: portrait) {
   main {
     display: flex;
     justify-content: flex-start;

@@ -71,7 +71,7 @@ document.addEventListener('turbolinks:load', () => {
   function resetOpacity() {
     const homeSections = document.querySelectorAll('.home-section');
 
-    if (window.innerWidth < 601) {
+    if (window.innerWidth < 651) {
       homeSections.forEach(section => {
         section.style.setProperty('opacity', '1');
         section.style.setProperty('z-index', '1');

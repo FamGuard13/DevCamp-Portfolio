@@ -1,0 +1,87 @@
+main {
+  display: block;
+}
+
+section {
+  display: grid;
+  background: image-url('BioPhoto.jpg');
+  background-size: cover;
+  background-position: 35% 20%;
+  grid-gap: 50px;
+  padding: 25px;
+  padding-top: 75px;
+}
+
+section .content {
+  display: grid;
+  align-content: center;
+  grid-row-gap: 20px;
+  height: 97%;
+  padding: 8vw 6.25vw;
+  margin: 10px;
+  margin: .625vw;
+  z-index: 2;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+section .content::after {
+  content: '';
+  position: absolute;
+  border: .5px solid rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  background-color: rgba(71, 71, 71, 0.2);
+  box-shadow: 0 0 15px rgba(194, 185, 185, 0.25);
+  z-index: -1;
+
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bio {
+  grid-template-columns: 5fr minmax(380px, 4fr);
+  justify-content: end;
+  justify-items: end;
+  align-items: center;
+}
+
+.bio .content {
+  grid-row: 2/-1;
+  grid-column: 2/-1;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.journey {
+  grid-template-columns: minmax(380px, 4fr) 5fr;
+  place-content: center;
+
+  background: image-url('daniel-von-appen-tb4heMa-ZRo-unsplash.jpg');
+  background-size: cover;
+  background-position: 65% 20%;
+}
+
+.journey .content,
+.journey img {
+  border: 2px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 775px) {
+  .bio {
+    height: auto;
+    min-height: 90vh;
+    grid-template-columns: 1fr;
+    align-content: end;
+  }
+
+  .bio .content {
+    height: auto;
+  }
+}
