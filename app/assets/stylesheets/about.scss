@@ -7,9 +7,8 @@ section {
   background: image-url('BioPhoto.jpg');
   background-size: cover;
   background-position: 35% 20%;
-  grid-gap: 50px;
-  padding: 25px;
-  padding-top: 75px;
+  padding: 1.56vw;
+  align-items: center;
 }
 
 section .content {
@@ -17,7 +16,7 @@ section .content {
   align-content: center;
   grid-row-gap: 20px;
   height: 97%;
-  padding: 8vw 6.25vw;
+  padding: 5.25vw;
   margin: 10px;
   margin: .625vw;
   z-index: 2;
@@ -35,8 +34,8 @@ section .content::after {
   box-shadow: 0 0 15px rgba(194, 185, 185, 0.25);
   z-index: -1;
 
-  width: 90%;
-  height: 90%;
+  width: calc(100% - 6.25vw);
+  height: calc(100% - 6.25vw);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -45,8 +44,7 @@ section .content::after {
 .bio {
   grid-template-columns: 5fr minmax(380px, 4fr);
   justify-content: end;
-  justify-items: end;
-  align-items: center;
+  padding-top: calc(50px + 1.56vw);
 }
 
 .bio .content {
@@ -59,7 +57,7 @@ section .content::after {
 
 .journey {
   grid-template-columns: minmax(380px, 4fr) 5fr;
-  place-content: center;
+  justify-content: center;
 
   background: image-url('daniel-von-appen-tb4heMa-ZRo-unsplash.jpg');
   background-size: cover;
@@ -73,15 +71,59 @@ section .content::after {
   border-radius: 10px;
 }
 
+.hobbies {
+  background-image: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  place-content: center;
+  place-items: center;
+  grid-gap: 4.6875vw;
+  margin: 0 auto;
+}
+
+.hobby {
+  width: 27vw;
+  height: 27vw;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 200px;
+  min-height: 200px;
+  background: black;
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 775px) {
+  .journey,
+  .hobbies,
   .bio {
     height: auto;
     min-height: 90vh;
     grid-template-columns: 1fr;
-    align-content: end;
+    align-items: end;
   }
 
+  .journey .content,
+  .hobbies .content,
   .bio .content {
     height: auto;
+    grid-column: 1/-1;
   }
+
+  .hobbies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .journey {
+    padding-bottom: calc(50px + 1.56vw);
+  }
+
+  .hobbies {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+
 }
