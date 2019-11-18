@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191029191332) do
+ActiveRecord::Schema.define(version: 20191118204444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,18 @@ ActiveRecord::Schema.define(version: 20191029191332) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
+  create_table "jobs", force: :cascade do |t|
+    t.string "company_name"
+    t.string "location"
+    t.date "start_date"
+    t.date "end_date"
+    t.text "description"
+    t.string "job_title"
+    t.text "company_logo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "portfolios", force: :cascade do |t|
     t.string "title"
     t.string "subtitle"
@@ -36,6 +48,17 @@ ActiveRecord::Schema.define(version: 20191029191332) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "position"
+  end
+
+  create_table "schools", force: :cascade do |t|
+    t.string "school_name"
+    t.string "location"
+    t.date "start_date"
+    t.date "end_date"
+    t.text "description"
+    t.text "school_logo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "skills", force: :cascade do |t|
