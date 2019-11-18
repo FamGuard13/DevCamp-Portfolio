@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :schools
+  resources :jobs
   resources :topics, only: [:index, :show]
 
   devise_for :users, path: '', path_names: { sign_in: 'admin-login', sign_out: 'logout', sign_up: 'register' }
