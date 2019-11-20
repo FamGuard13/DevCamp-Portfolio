@@ -10,7 +10,9 @@ class PagesController < ApplicationController
     @skills = Skill.all
   end
   
-  def tech_news
-    @tweets = SocialTool.twitter_search
+  def qualifications
+    @skills = Skill.all
+    @jobs = Job.all
+    @schools = School.all
   end
 end
