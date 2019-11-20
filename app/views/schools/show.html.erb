@@ -1,1 +1,15 @@
 <h1>hello from Schools Show</h1>
+
+<h1><%= @school.name %></h1>
+
+<p><%= @school.location %></p>
+
+<p><%= markdown(@school.description) %></p>
+
+<p><%= @school.start_date %></p>
+
+<p><%= @school.end_date %></p>
+
+<%= image_tag(@school.logo, width: '300px') %>
+
+<%= admin_links('school_path(@school)') %>

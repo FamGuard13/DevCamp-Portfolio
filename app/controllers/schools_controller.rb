@@ -14,7 +14,7 @@ class SchoolsController < ApplicationController
 
     respond_to do |format|
       if @school.save
-        format.html { redirect_to(schools_path, notice: 'School Created') }
+        format.html { redirect_to(qualifications_path, notice: 'School Created') }
       else
         format.html { render :new }
       end
@@ -27,7 +27,7 @@ class SchoolsController < ApplicationController
   def update
     respond_to do |format|
       if @school.update(school_params)
-        format.html { redirect_to schools_path, notice: 'School Sucessfully updated' }
+        format.html { redirect_to qualifications_path, notice: 'School Sucessfully updated' }
       else
         format.html { render :edit }
       end
@@ -35,15 +35,15 @@ class SchoolsController < ApplicationController
   end
 
   def show
+  end
+
+  def destroy
     @school.destroy
 
     # Redirect
     respond_to do |format|
-      format.html { redirect_to schools_url, notice: 'School was removed.' }
+      format.html { redirect_to qualifications_path, notice: 'School was removed.' }
     end
-  end
-
-  def destroy
   end
 
   private

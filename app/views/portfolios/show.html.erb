@@ -1,25 +1,21 @@
-<div class="container portfolio-container">
-	<div class="row">
-		<div class="col-md-7">
-			<%= image_tag(portfolio_img(@portfolio_item.main_image, 'main'), width: '300px') %>
-		</div>
+<div>
+	<%= image_tag(portfolio_img(@portfolio_item.main_image, 'main'), width: '300px') %>
+</div>
 
-		<div class="col-md-5">
-			<h1><%= @portfolio_item.title %></h1>
+<div>
+	<h1><%= @portfolio_item.title %></h1>
 
-			<em><%= @portfolio_item.subtitle %></em>
+	<em><%= @portfolio_item.subtitle %></em>
 
-			<p><%= markdown(@portfolio_item.body) %></p>
+	<p><%= markdown(@portfolio_item.body) %></p>
 
-			<hr>
+	<hr>
 
-			<h3> Technologies Used </h3>
+	<h3> Technologies Used </h3>
 
-			<% @portfolio_item.technologies.each do |t| %>
-			<p><%= t.name %></p>
-			<% end %>
+	<% @portfolio_item.technologies.each do |t| %>
+	<p><%= t.name %></p>
+	<% end %>
 
-			<%= admin_links('portfolio_path(@portfolio_item)') %>
-		</div>
-	</div>
+	<%= admin_links('portfolio_path(@portfolio_item)') %>
 </div>

@@ -1,0 +1,13 @@
+<h1>hello from Jobs Show</h1>
+
+<%= image_tag(@job.logo, width: '300')  %>
+
+<h1><%= @job.name %></h1>
+
+<p><%= @job.location %></p>
+
+<p><%= @job.title %></p>
+
+<p><%= markdown(@job.description) %></p>
+
+<%= admin_links('job_path(@job)') %>
