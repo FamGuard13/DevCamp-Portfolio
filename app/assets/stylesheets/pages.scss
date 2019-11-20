@@ -175,7 +175,7 @@ section {
 }
 
 @media screen and (max-width: 650px) and (orientation: portrait) {
-  main {
+  .home-main {
     display: flex;
     justify-content: flex-start;
     overflow: hidden;

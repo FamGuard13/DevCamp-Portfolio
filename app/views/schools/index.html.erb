@@ -5,5 +5,17 @@
 <h1>hello from Schools</h1>
 
 <% @schools.each do |school| %>
-  <p><%= school.name %></p>
+  <%= link_to(school_show_path(school)) do%>
+      <ul class="school">
+        <li><%= school.name %></li>
+        <li><%= school.location %></li>
+        <li><%= school.start_date %></li>
+        <li><%= school.end_date %></li>
+        <li><%= school.description %></li>
+        <li><%= image_tag(school.logo, width:'300') if school.logo%></li>
+      </ul>
+  <br>
+  <hr>
+  <br>
+  <% end %>
 <% end %>
