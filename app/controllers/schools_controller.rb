@@ -35,6 +35,12 @@ class SchoolsController < ApplicationController
   end
 
   def show
+    @school.destroy
+
+    # Redirect
+    respond_to do |format|
+      format.html { redirect_to schools_url, notice: 'School was removed.' }
+    end
   end
 
   def destroy
