@@ -55,7 +55,7 @@ module ApplicationHelper
       },
 
       {
-        url: contact_path,
+        url: qualifications_path,
         title: 'Qualifications',
         data_tag: '.qualifications'
       },
@@ -103,6 +103,12 @@ module ApplicationHelper
   def home_page_menu
     if current_page?('/')
       "class = 'home-nav'".html_safe
+    end
+  end
+
+  def admin_link(link_text, link_path, styles = '')
+    if logged_in?(:site_admin)
+      content_tag(:div, link_to(link_text, link_path, class: styles))
     end
   end
 end
