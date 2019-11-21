@@ -1,17 +1,19 @@
-<h1>hello from Schools</h1>
+<div class="grid-sort">
+  <% @schools.each do |school| %>
+    <%= link_to(school_show_path(school)) do%>
+        <ul class="school">
+          <li>
+            <%= school.name %>
+          </li>
 
-<% @schools.each do |school| %>
-  <%= link_to(school_show_path(school)) do%>
-      <ul class="school">
-        <li><%= school.name %></li>
-        <li><%= school.location %></li>
-        <li><%= school.start_date %></li>
-        <li><%= school.end_date %></li>
-        <li><%= school.description %></li>
-        <li><%= image_tag(school.logo, width:'300') if school.logo%></li>
-      </ul>
-  <br>
-  <hr>
-  <br>
+          <li>
+            <%= school.location %>
+          </li>
+
+          <li>
+            <%= image_tag(school.logo) if school.logo%>
+          </li>
+        </ul>
+    <% end %>
   <% end %>
-<% end %>
+</div>

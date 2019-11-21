@@ -1,17 +1,19 @@
-<h1>hello from Jobs</h1>
+<div class="grid-sort">
+  <% @jobs.each do |job| %>
+    <%= link_to(job_show_path(job)) do%>
+        <ul class="job">
+          <li>
+            <%= job.name %>
+          </li>
 
-<% @jobs.each do |job| %>
-  <%= link_to(job_show_path(job)) do%>
-      <ul class="job">
-        <li><%= job.name %></li>
-        <li><%= job.location %></li>
-        <li><%= job.start_date %></li>
-        <li><%= job.end_date %></li>
-        <li><%= job.description %></li>
-        <li><%= image_tag(job.logo, width:'300') if job.logo%></li>
-      </ul>
-  <br>
-  <hr>
-  <br>
+          <li>
+            <%= job.location %>
+          </li>
+
+          <li>
+            <%= image_tag(job.logo) if job.logo%>
+          </li>
+        </ul>
+    <% end %>
   <% end %>
-<% end %>>
+</div>

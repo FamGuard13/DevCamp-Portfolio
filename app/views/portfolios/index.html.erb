@@ -1,3 +1,19 @@
-<div class="row <%= "sortable" if logged_in?(:site_admin) %>">
-  <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+<div class="grid-sort <%= "sortable" if logged_in?(:site_admin) %>">
+  <% @portfolio_items.each do |portfolio_item| %>
+   <%= link_to(portfolio_show_path(portfolio_item)) do%>
+        <ul class='portfolio-item' data-id='<%= portfolio_item.id %>'>
+          <li>
+            <%= portfolio_item.title %>
+          </li>
+
+          <li>
+            <%= portfolio_item.subtitle %>
+          </li>
+
+          <li>
+            <%= image_tag(portfolio_img(portfolio_item.thumb_image, 'thumb')) %>
+          </li>
+        </ul>
+    <% end %>
+  <% end %>
 </div>

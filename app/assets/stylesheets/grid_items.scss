@@ -2,3 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.grid-sort {
+  display: flex;
+  margin: 75px auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.grid-sort > * {
+  width: 300px;
+  margin: 10px;
+}
+
+.grid-sort li {
+  list-style: none;
+}
