@@ -1,5 +1,3 @@
 class Job < ApplicationRecord
-  def index
-    @jobs = Job.all
-  end
+  validates_presence_of :name, :logo, :img, :link, :location, :description :title, :start_date
 end
