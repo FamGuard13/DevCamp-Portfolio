@@ -17,11 +17,11 @@ puts "1 Regular User Created"
 
 puts "10 blog posts created"
 
-4.times do |skill|
+['Ruby on Rails', 'Ruby', 'HTML', 'CSS', 'Javascript'].each_with_index do |skill, index|
     Skill.create!(
-        title: "Rails #{skill}",
-        percent_utilized: 15
-        )
+        title: skill,
+        percent_utilized: ((index + 1) * 6.667).round,
+        ) 
 end
 
 puts "5 skills created"
@@ -41,6 +41,7 @@ end
     Portfolio.create!(
         title: "Portfolio Title: #{portfolio_item}",
         subtitle: "Angular",
+        link: '',
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         main_image: "https://source.unsplash.com/random",
         thumb_image: "https://source.unsplash.com/random",
@@ -57,10 +58,12 @@ end
 
 puts "3 tech's Created!"
 
-3.times do |school|
+['Botegga', 'The Odin Project'].each do |school|
     School.create!(
         name: "School: #{school}",
         logo: 'https://source.unsplash.com/random',
+        img: 'https://source.unsplash.com/random',
+        link: '',
         location: 'Online',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         start_date: '2007-11-19',
@@ -74,6 +77,8 @@ puts "Created 3 Schools"
     Job.create!(
         name: "Job: #{job}",
         logo: 'https://source.unsplash.com/random',
+        img: 'https://source.unsplash.com/random',
+        link: '',
         location: 'Online',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         title: "Title: #{job}",

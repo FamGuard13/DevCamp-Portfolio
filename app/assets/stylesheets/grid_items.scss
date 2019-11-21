@@ -10,11 +10,30 @@
   max-width: 1200px;
 }
 
-.grid-sort > * {
-  width: 300px;
-  margin: 10px;
+.grid-sort a {
+  flex: 18.75vw 1 1;
+  height: 18.75vw;
+  margin: 15px;
+}
+
+.grid-sort ul {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.grid-sort ul img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 .grid-sort li {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
