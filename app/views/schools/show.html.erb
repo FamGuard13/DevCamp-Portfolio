@@ -10,6 +10,6 @@
 
 <p><%= @school.end_date %></p>
 
-<%= image_tag(@school.logo, width: '300px') %>
+<%= image_tag(img(@school.logo), width: '300')%>
 
 <%= admin_links('school_path(@school)') %>

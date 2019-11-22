@@ -1,4 +1,9 @@
 <%= form_for(@school) do |f| %>
+  <% if @school.errors.any? %>
+    <% @school.errors.full_messages.each do |error| %>
+      <%= alert_generator(error) %>
+    <% end %>
+  <% end %>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>

@@ -1,4 +1,9 @@
 <%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <% @job.errors.full_messages.each do |error| %>
+      <%= alert_generator(error) %>
+    <% end %>
+  <% end %>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -21,13 +26,13 @@
 
   <div class="field">
     <label class="btn btn-primary">
-      Upload Job Image <%= f.file_field :img, style: 'display:none;' %>
+      Upload Job Image <%= f.file_field :img %>
     </label>
   </div>
 
   <div class="field">
     <label class="btn btn-primary">
-      Upload Job Logo <%= f.file_field :logo, style: 'display:none;' %>
+      Upload Job Logo <%= f.file_field :logo %>
     </label>
   </div>
 
