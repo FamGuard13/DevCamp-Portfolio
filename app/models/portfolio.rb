@@ -4,10 +4,10 @@ class Portfolio < ApplicationRecord
                                   allow_destroy: true,
                                   reject_if: lambda { |attrs| attrs['name'].blank?}
     
-    validates_presence_of :title, :body, :link, :main_image, :thumb_image
+    validates_presence_of :title, :body, :main_image, :thumb_image
     
-    mount_uploader :thumb_image, PortfolioUploader
-    mount_uploader :main_image, PortfolioUploader
+    mount_uploader :thumb_image, ImageUploader
+    mount_uploader :main_image, ImageUploader
     
     def self.by_position
         order("position ASC")

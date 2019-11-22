@@ -113,4 +113,12 @@ module ApplicationHelper
                   link_to('Delete', eval(link_path), method: :delete, data: { confirm: 'Are you sure?'}, class: styles))
     end
   end
+
+  def img(img, type)
+    if img.model.main_image? || img.model.thumb_image?
+      img
+    else
+      'https://source.unsplash.com/random'
+    end
+  end
 end
