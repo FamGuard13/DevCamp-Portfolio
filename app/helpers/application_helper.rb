@@ -114,8 +114,8 @@ module ApplicationHelper
     end
   end
 
-  def img(img, type)
-    if img.model.main_image? || img.model.thumb_image?
+  def img(image)
+    if image.model.img? || image.model.logo?
       img
     else
       'https://source.unsplash.com/random'

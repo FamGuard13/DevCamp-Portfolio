@@ -20,6 +20,18 @@
   </div>
 
   <div class="field">
+    <label class="btn btn-primary">
+      Upload Job Image <%= f.file_field :img, style: 'display:none;' %>
+    </label>
+  </div>
+
+  <div class="field">
+    <label class="btn btn-primary">
+      Upload Job Logo <%= f.file_field :logo, style: 'display:none;' %>
+    </label>
+  </div>
+
+  <div class="field">
     <%= f.label :start_date %>
     <%= f.date_field :start_date %>
   </div>

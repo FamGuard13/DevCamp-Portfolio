@@ -1,3 +1,2 @@
 module PortfoliosHelper
- 
 end
