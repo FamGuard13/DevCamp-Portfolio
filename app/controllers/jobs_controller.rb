@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:edit, :show, :update, :destroy]
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
   def index
     @jobs = Job.all
@@ -54,7 +55,8 @@ class JobsController < ApplicationController
                                    :start_date, 
                                    :end_date, 
                                    :logo,
-                                   :img
+                                   :img,
+                                   :link
                                   )
   end
 
