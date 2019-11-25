@@ -15,10 +15,6 @@ section {
   margin-top: -50px;
 }
 
-section:nth-child(2) {
-  background-color: black;
-}
-
 .title {
   text-align: center;
 }
@@ -53,6 +49,7 @@ section:nth-child(2) {
   overflow: hidden;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+  transition: filter 250ms ease-out;
 }
 
 .grid-sort ul .background {
@@ -67,6 +64,8 @@ section:nth-child(2) {
 }
 
 .content {
+  position: absolute;
+  bottom: -45px;
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -74,24 +73,22 @@ section:nth-child(2) {
   justify-content: center;
 
   color: white;
-  transform: translateY(150px);
-  transition: transform 200ms ease-in;
+  transition: transform 250ms ease-out;
 }
 
-ul:hover > .content {
-  transform: translateY(0);
+.grid-sort ul:hover > .content {
+  transform: translateY(-85%);
 }
 
-ul:hover .background {
+.grid-sort ul:hover .background {
   filter: blur(1px);
+
 }
 
-.grid-sort ul .logo {
+.grid-sort ul #logo {
   margin: 1.5%;
-  width: 40%;
+  width: 50%;
   height: auto;
-  right: 0;
-  bottom: 0;
 }
 
 .grid-sort ul::after {

@@ -3,7 +3,9 @@
 </section>
 
 <section id="skillset">
-
+  <% @skills.each do |skill|%>
+    <div><%= skill.title %> - <%= skill.percent_utilized %></div>
+  <% end %>
 </section>
 
 <section id="work-history">
