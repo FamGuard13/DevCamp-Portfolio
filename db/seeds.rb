@@ -27,7 +27,7 @@ end
 puts "5 skills created"
 
 
-8.times do |portfolio_item|
+5.times do |portfolio_item|
     Portfolio.create!(
         title: "Portfolio Title: #{portfolio_item}",
         subtitle: "Ruby on Rails",
@@ -49,7 +49,7 @@ end
         )
 end 
 
-puts "9 portfolio's created"
+puts "6 portfolio's created"
 
 3.times do |technology|
    Portfolio.last.technologies.create!(
@@ -64,7 +64,7 @@ puts "3 tech's Created!"
         name: "#{school}",
         logo: 'https://source.unsplash.com/random',
         img: 'https://source.unsplash.com/random',
-        status: 'Currently Attending'
+        status: 'Currently Attending',
         link: '',
         location: 'Online',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',

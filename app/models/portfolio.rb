@@ -4,7 +4,7 @@ class Portfolio < ApplicationRecord
                                   allow_destroy: true,
                                   reject_if: lambda { |attrs| attrs['name'].blank?}
     
-    validates_presence_of :title, :body, :main_image, :thumb_image
+    validates_presence_of :title, :body
     
     mount_uploader :thumb_image, ImageUploader
     mount_uploader :main_image, ImageUploader
@@ -15,3 +15,4 @@ class Portfolio < ApplicationRecord
     
     scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails')}
 end
+# , :main_image, :thumb_image

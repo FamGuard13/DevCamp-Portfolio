@@ -1,4 +1,6 @@
 <section class='grid-sort-section' id='portfolio'>
+  <h1>Here are some of my Projects</h1>
+
   <div class="grid-sort <%= "sortable" if logged_in?(:site_admin) %>">
     <% @portfolio_items.each do |portfolio_item| %>
       <%= link_to(portfolio_show_path(portfolio_item)) do%>

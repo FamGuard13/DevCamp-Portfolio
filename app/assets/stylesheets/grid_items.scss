@@ -22,7 +22,8 @@
 
 .grid-sort {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  height: 100%;
   flex-wrap: wrap;
   width: 100%;
   max-width: 1400px;
@@ -162,4 +163,15 @@
   flex: 200px 0 1;
   height: 250px;
   min-height: auto;
+  margin: 1.875vw;
+}
+
+@media screen and (min-width: 1600px) {
+  #portfolio .grid-sort > a {
+    margin: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  margin: 12px;
 }
