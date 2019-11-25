@@ -17,4 +17,6 @@
 //= require gritter
 //= require cable
 //= require turbolinks
+//= require chartkick
+//= require Chart.bundle
 //= require_tree .

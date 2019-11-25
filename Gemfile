@@ -42,5 +42,6 @@ gem 'redis', '~> 4.0', '>= 4.0.1'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'cssremedy-rails', '~> 0.1.7'
+gem "chartkick"
 
 ruby "2.4.2"

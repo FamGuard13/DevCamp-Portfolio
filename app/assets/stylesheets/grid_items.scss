@@ -7,11 +7,10 @@ section {
   grid-gap: 50px;
   place-items: center;
   align-content: center;
-  padding-top: 50px;
+  padding: 50px;
 }
 
 #education {
-  padding-top: 0;
   margin-top: -50px;
 }
 
@@ -87,7 +86,7 @@ section {
 
 .grid-sort ul #logo {
   margin: 1.5%;
-  width: 50%;
+  width: 45%;
   height: auto;
 }
 
@@ -106,3 +105,47 @@ section {
   padding: 0;
   margin: 0;
 }
+
+#skillset {
+  margin: 0 auto;
+}
+
+#skillset h1 {
+  grid-column: 1/-1;
+  justify-self: center;
+}
+
+#skillset .skills {
+  box-shadow: 0px 5px 8px rgba(90, 61, 61, 0.25);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  max-width: 1000px;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+#skillset .chart {
+  justify-self: start;
+}
+
+#skillset .graphic {
+  display: grid;
+  height: 400px;
+  width: 100%;
+}
+
+#skillset .graphic div {
+  display: flex; 
+  justify-content: space-evenly;
+}
+
+.chartjs-render-monitor,
+#skillset .graphic img {
+  filter: drop-shadow(0 5px 5px rgba(90, 61, 61, 0.5));
+}
+
+#skillset .graphic img {
+  width: 75px;
+  margin: 15px;
+} 

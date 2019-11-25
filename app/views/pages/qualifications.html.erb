@@ -3,13 +3,30 @@
 </section>
 
 <section id="skillset">
-  <% @skills.each do |skill|%>
-    <div><%= skill.title %> - <%= skill.percent_utilized %></div>
-  <% end %>
+  <h1>Skillset</h1>
+    <div class="skills">
+    <div class="graphic">
+      <div>
+        <%= image_tag('CSS3_logo_and_wordmark.svg')%>
+        <%= image_tag('HTML5 Logo.svg')%>
+      </div>
+
+      <div>
+        <%= image_tag('javascript-js-seeklogo.com.svg')%>
+      </div>
+
+      <div>
+        <%= image_tag('Ruby_On_Rails_Logo.svg')%>
+        <%= image_tag('Ruby_logo.svg')%>
+      </div>
+    </div>
+
+    <div class="chart">
+      <%= pie_chart Skill.group(:title).sum(:percent_utilized), legend: "bottom", donut: true, width: "400px", height: "400px", suffix: "%" %>
+    </div>
+    </div>
 </section>
 
 <section id="work-history">
   <%= render( file: 'jobs/index') %>
 </section>
-
-
