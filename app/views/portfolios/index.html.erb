@@ -1,19 +1,20 @@
-<div class="grid-sort <%= "sortable" if logged_in?(:site_admin) %>">
-  <% @portfolio_items.each do |portfolio_item| %>
-   <%= link_to(portfolio_show_path(portfolio_item)) do%>
-        <ul class='portfolio-item' data-id='<%= portfolio_item.id %>'>
-          <li>
-            <%= portfolio_item.title %>
-          </li>
+<section class='grid-sort-section' id='portfolio'>
+  <div class="grid-sort <%= "sortable" if logged_in?(:site_admin) %>">
+    <% @portfolio_items.each do |portfolio_item| %>
+      <%= link_to(portfolio_show_path(portfolio_item)) do%>
+          <ul class='portfolio-item' data-id='<%= portfolio_item.id %>'>
 
-          <li>
-            <%= portfolio_item.subtitle %>
-          </li>
+            <li class='background'>
+              <%= image_tag(portfolio_img(portfolio_item.thumb_image), class: 'background') %>
+            </li>
 
-          <li>
-            <%= image_tag(portfolio_img(portfolio_item.thumb_image)) %>
-          </li>
-        </ul>
+            <li class="content">
+              <p><%= portfolio_item.title %></p>
+              <p><%= portfolio_item.subtitle %></p>
+            </li>
+
+          </ul>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
+</section>

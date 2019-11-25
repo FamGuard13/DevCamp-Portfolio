@@ -2,12 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-section {
+.grid-sort-section {
   display: grid;
   grid-gap: 50px;
   place-items: center;
   align-content: center;
   padding: 3vw;
+}
+
+@media screen and (min-width: 1600px) {
+  .grid-sort-section {
+    padding: 50px;
+  }
 }
 
 .title {
@@ -23,9 +29,8 @@ section {
 }
 
 .grid-sort a {
-  flex: 21.875vw 1 1;
+  flex: 440px 1 1;
   min-width: 400px;
-  max-width: 600px;
   height: 21.875vw;
   max-height: 350px;
   min-height: 300px;
@@ -151,4 +156,10 @@ section {
   filter: drop-shadow(0 10px 5px rgba(90, 61, 61, 0.5));
   transition: transform 50ms ease-out,
               filter 50ms ease-out
+}
+
+#portfolio .grid-sort > a {
+  flex: 200px 0 1;
+  height: 250px;
+  min-height: auto;
 }
