@@ -7,11 +7,7 @@ section {
   grid-gap: 50px;
   place-items: center;
   align-content: center;
-  padding: 50px;
-}
-
-#education {
-  margin-top: -50px;
+  padding: 3vw;
 }
 
 .title {
@@ -27,12 +23,12 @@ section {
 }
 
 .grid-sort a {
-  flex-basis: 45%;
+  flex: 21.875vw 1 1;
   min-width: 400px;
   max-width: 600px;
   height: 21.875vw;
   max-height: 350px;
-  min-height: 235px;
+  min-height: 300px;
   margin: 10px;
   text-decoration: none;
 }
@@ -63,20 +59,19 @@ section {
 }
 
 .grid-sort .content {
-  position: absolute;
-  bottom: -45px;
   z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  height: 100%;
   color: white;
   transition: transform 250ms ease-out;
+  transform: translateY(42%);
 }
 
 .grid-sort ul:hover > .content {
-  transform: translateY(-85%);
+  transform: translateY(0);
 }
 
 .grid-sort ul:hover .background {
@@ -88,6 +83,7 @@ section {
   margin: 1.5%;
   width: 45%;
   height: auto;
+  min-width: 150px;
 }
 
 .grid-sort ul::after {
