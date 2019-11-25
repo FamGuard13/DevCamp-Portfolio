@@ -44,7 +44,6 @@ section .content::after {
 .bio {
   grid-template-columns: 5fr minmax(380px, 4fr);
   justify-content: end;
-  padding-top: calc(50px + 1.56vw);
 }
 
 .bio .content {
