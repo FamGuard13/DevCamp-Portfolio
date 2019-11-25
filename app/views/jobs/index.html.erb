@@ -1,17 +1,15 @@
+<h1 class='title' >Work History</h1>
+
 <div class="grid-sort">
   <% @jobs.each do |job| %>
     <%= link_to(job_show_path(job)) do%>
         <ul class="job">
           <li>
-            <%= job.name %>
+            <%= image_tag(job.logo, class: 'logo') %>
           </li>
 
           <li>
-            <%= job.location %>
-          </li>
-
-          <li>
-            <%= image_tag(img(job.img))%>
+            <%= image_tag(img(job.img), class: 'background')%>
           </li>
         </ul>
     <% end %>
