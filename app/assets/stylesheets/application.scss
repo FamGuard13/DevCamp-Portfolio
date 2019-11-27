@@ -16,7 +16,6 @@
   padding: 0;
   margin: 0;
   line-height: 1.5em;
-  text-align: center;
 }
 
 .wrapper {
@@ -27,4 +26,10 @@
 
 main {
   padding-top: 50px;
+}
+
+@media screen and (max-width: 650px) {
+  main {
+    padding-bottom: 50px;
+  }
 }

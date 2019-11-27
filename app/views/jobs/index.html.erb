@@ -5,11 +5,11 @@
     <%= link_to(job_show_path(job)) do%>
         <ul class="job">
           <li class='background'>
-            <%= image_tag(job.img, class: 'background') %>
+            <%= image_tag(img(job.img), class: 'background') %>
           </li>
 
           <li class='content'>
-            <%= image_tag(img(job.logo), id: 'logo')%>
+            <%= image_tag(img(job.logo), id: 'logo') %>
             <p>Location: <%= job.title %></p>
             <p>Status: <%= job.location %></p>
           </li>

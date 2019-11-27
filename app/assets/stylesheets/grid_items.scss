@@ -14,7 +14,18 @@
   .grid-sort-section {
     padding: 50px;
   }
+
+  #portfolio .grid-sort > a {
+    margin: 15px;
+  }
 }
+
+@media screen and (max-width: 1600px) {
+  .grid-sort > a {
+    max-width: 600px;
+  }
+}
+
 
 .title {
   text-align: center;
@@ -26,16 +37,29 @@
   height: 100%;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
 }
 
-.grid-sort a {
+.divider {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 25px auto;
+
+  display:block;
+  border:none;
+  color:white;
+  height:1px;
+  background:black;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+}
+
+.grid-sort > a {
   flex: 440px 1 1;
-  min-width: 400px;
   height: 21.875vw;
   max-height: 350px;
   min-height: 300px;
-  margin: 10px;
+  margin: .625vw;
   text-decoration: none;
 }
 
@@ -71,6 +95,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
   color: white;
   transition: transform 250ms ease-out;
   transform: translateY(42%);
@@ -82,7 +107,6 @@
 
 .grid-sort ul:hover .background {
   filter: blur(1px);
-
 }
 
 .grid-sort ul #logo {
@@ -122,13 +146,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  width: 100%;
   max-width: 1000px;
   padding: 40px;
   border-radius: 5px;
-}
-
-#skillset .chart {
-  justify-self: start;
 }
 
 #skillset .graphic {
@@ -160,18 +181,16 @@
 }
 
 #portfolio .grid-sort > a {
-  flex: 200px 0 1;
-  height: 250px;
-  min-height: auto;
-  margin: 1.875vw;
+  margin: .875vw;
 }
 
-@media screen and (min-width: 1600px) {
-  #portfolio .grid-sort > a {
-    margin: 30px;
+@media screen and (max-width: 725px) {
+  #skillset .skills {
+    grid-template-columns: 1fr;
+    height: 100%;
   }
-}
 
-@media screen and (max-width: 650px) {
-  margin: 12px;
+  #skillset .graphic {
+    display: none;
+  }
 }

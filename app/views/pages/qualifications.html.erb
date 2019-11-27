@@ -2,6 +2,8 @@
   <%= render( file: 'schools/index') %>
 </section>
 
+<div class="divider"></div>
+
 <section class='grid-sort-section' id="skillset">
   <h1>Skillset</h1>
     <div class="skills">
@@ -22,10 +24,17 @@
     </div>
 
     <div class="chart">
-      <%= pie_chart Skill.group(:title).sum(:percent_utilized), legend: "bottom", donut: true, width: "400px", height: "400px", suffix: "%" %>
+      <%= pie_chart Skill.group(:title).sum(:percent_utilized), legend: "bottom", 
+                                                                donut: true, 
+                                                                width: "100%", 
+                                                                height: "400px", 
+                                                                suffix: "%"
+                                                                %>
     </div>
     </div>
 </section>
+
+<div class="divider"></div>
 
 <section class='grid-sort-section' id="work-history">
   <%= render( file: 'jobs/index') %>
