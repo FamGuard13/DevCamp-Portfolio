@@ -56,11 +56,14 @@
 
 .grid-sort > a {
   flex: 440px 1 1;
-  height: 21.875vw;
-  max-height: 350px;
-  min-height: 300px;
+  height: 300px;
   margin: .625vw;
   text-decoration: none;
+}
+
+#education .grid-sort > a {
+  height: 22vw;
+  max-height: 400px;
 }
 
 .grid-sort ul {
