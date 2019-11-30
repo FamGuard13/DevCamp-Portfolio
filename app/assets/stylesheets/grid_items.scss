@@ -61,8 +61,41 @@
   text-decoration: none;
 }
 
+#education,
+#work-history {
+  background: image-url('graducation-cap.jpg');
+  background-size: cover;
+  background-position: 10% center;
+  position: relative;
+  z-index: 1;
+}
+
+#education::after,
+#work-history::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, .25) 70%,
+                              rgba(255, 255, 255, .95)
+                              );
+  z-index: -1;
+}
+
+#work-history {
+  background: image-url('startup-593341_1280.jpg');
+  background-size: cover;
+}
+
+#work-history::after {
+  background: linear-gradient(rgba(255, 255, 255, 1) 25%,
+                            rgba(255, 255, 255, .25)
+                              );
+}
+
 #education .grid-sort > a {
   height: 22vw;
+  min-height: 300px;
   max-height: 400px;
 }
 
@@ -78,6 +111,7 @@
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, .25);
   transition: filter 250ms ease-out;
+  z-index: 10;
 }
 
 .grid-sort ul .background {

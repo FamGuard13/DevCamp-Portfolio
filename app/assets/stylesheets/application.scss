@@ -24,8 +24,10 @@
   height: 100%;
 }
 
-main {
-  padding-top: 50px;
+@media screen and (min-width: 650px) {
+  main {
+    padding-top: 50px;
+  }
 }
 
 @media screen and (max-width: 650px) {
