@@ -109,8 +109,8 @@ module ApplicationHelper
   def admin_links(link_path, styles = nil)
     if logged_in?(:site_admin)
       content_tag(:div, 
-                  link_to('Edit', eval('edit_' + link_path), class: styles) + 
-                  link_to('Delete', eval(link_path), method: :delete, data: { confirm: 'Are you sure?'}, class: styles))
+                  link_to('Edit', eval('edit_' + link_path)) + 
+                  link_to('Delete', eval(link_path), method: :delete, data: { confirm: 'Are you sure?'}), class: styles)
     end
   end
 

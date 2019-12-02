@@ -1,17 +1,51 @@
-<h1>hello from Schools Show</h1>
+<div class="show">
+  <section 
+  class='headline' 
+  style="background-image: url('<%= img(@school.img) %>')"
+  >
+    <%= image_tag(img(@school.logo), class: 'school-logo')%>
 
-<h1><%= @school.name %></h1>
+    <%= admin_links('school_path(@school)', 'admin-links') %>
+  </section>
 
-<p><%= @school.location %></p>
+  <section class='description'>
+    <div class='paired-image'></div>
 
-<p><%= @school.link %></p>
+    <div class='copy'>
+      <%= markdown(@school.description) %>
+    </div>
+  </section>
 
-<p><%= markdown(@school.description) %></p>
+  <div class="divider"></div>
 
-<p><%= @school.start_date %></p>
+  <section class='details'>
+    <h1>School Details</h1>
+    <div>
+      <h3>Attended Location</h3>
+      <%= @school.location %>
+    </div>
 
-<p><%= @school.end_date %></p>
+    <div>
+      <h3>Completion Status</h3>
+      <%= @school.status %>
+    </div>
 
-<%= image_tag(img(@school.logo), width: '300')%>
+    <div>
+      <h3>Attendance</h3>
+      <p><b>Start-Date:</b> <%= @school.end_date.strftime("%b, %Y") %></p>
+      <p><b>End-Date:</b> <%= @school.end_date.strftime("%b, %Y") %></p>
+    </div>
+  </section>
 
-<%= admin_links('school_path(@school)') %>
+  <div class="divider"></div>
+
+  <section class="experience">
+    <div class='copy'>
+      <%= markdown(@school.description) %>
+    </div>
+
+      <div class='paired-image'></div>
+  </section>
+
+  <p><%= @school.link %></p>
+</div>
