@@ -1,13 +1,51 @@
-<h1><%= @job.name %></h1>
+<div class="show">
+  <section 
+  class='headline' 
+  style="background-image: url('<%= img(@job.img) %>')"
+  >
+    <%= image_tag(img(@job.logo), class: 'grid-logo')%>
 
-<p><%= @job.location %></p>
+    <%= admin_links('job_path(@job)', 'admin-links') %>
+  </section>
 
-<p><%= @job.title %></p>
+  <section class='description'>
+    <div class='paired-image'></div>
 
-<p><%= @job.link %></p>
+    <div class='copy'>
+      <%= markdown(@job.description) %>
+    </div>
+  </section>
 
-<%= image_tag(img(@job.img), width: '300')%>
+  <div class="divider"></div>
 
-<p><%= markdown(@job.description) %></p>
+  <section class='details'>
+    <h1>Job Details</h1>
+    <div>
+      <h3>Location</h3>
+      <%= @job.location %>
+    </div>
 
-<%= admin_links('job_path(@job)') %>
+    <div>
+      <h3>Job Title</h3>
+      <%= @job.title %>
+    </div>
+
+    <div>
+      <h3>Time Employed</h3>
+      <p><b>Start-Date:</b> <%= @job.end_date.strftime("%b, %Y") %></p>
+      <p><b>End-Date:</b> <%= @job.end_date.strftime("%b, %Y") %></p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="experience">
+    <div class='copy'>
+      <%= markdown(@job.description) %>
+    </div>
+
+      <div class='paired-image'></div>
+  </section>
+
+  <p><%= @job.link %></p>
+</div>

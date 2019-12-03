@@ -1,17 +1,25 @@
-<div>
-	<%= image_tag(portfolio_img(@portfolio_item.main_image), width: '300px') %>
+<div class="show">
+<section 
+  class='headline' 
+  style="background-image: url('<%= portfolio_img(@portfolio_item.main_image) %>')"
+  >
+   <h1><%= @portfolio_item.title %></h1>
+
+ 	<%= admin_links('portfolio_path(@portfolio_item)', 'admin-links') %>
+  </section>
+
+	<section class='description'>
+    <div class='paired-image'></div>
+
+    <div class='copy'>
+      <%= markdown(@portfolio_item.body) %>
+    </div>
+  </section>
+
+	<%= @portfolio_item.link %>
 </div>
 
 <div>
-	<h1><%= @portfolio_item.title %></h1>
-
-	<em><%= @portfolio_item.subtitle %></em>
-
-	<%= @portfolio_item.link %>
-
-	<p><%= markdown(@portfolio_item.body) %></p>
-
-	<hr>
 
 	<h3> Technologies Used </h3>
 
@@ -19,5 +27,5 @@
 	<p><%= t.name %></p>
 	<% end %>
 
-	<%= admin_links('portfolio_path(@portfolio_item)') %>
+	
 </div>
