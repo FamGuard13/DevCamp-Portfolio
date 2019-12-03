@@ -3,7 +3,7 @@
   class='headline' 
   style="background-image: url('<%= portfolio_img(@portfolio_item.main_image) %>')"
   >
-   <h1><%= @portfolio_item.title %></h1>
+   <h1 style="color: white;" class="grid-logo"><%= @portfolio_item.title %></h1>
 
  	<%= admin_links('portfolio_path(@portfolio_item)', 'admin-links') %>
   </section>
@@ -26,6 +26,4 @@
 	<% @portfolio_item.technologies.each do |t| %>
 	<p><%= t.name %></p>
 	<% end %>
-
-	
 </div>
