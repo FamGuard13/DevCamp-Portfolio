@@ -4,7 +4,11 @@
 @import "nav.scss";
 @import "pages.scss";
 @import "grid_items.scss";
-@import "show.scss";
+@import "portfolio_show.scss";
+
+body {
+  background-color: #fafafa;
+}
 
 :root {
   --transform-shift:0vw;
@@ -18,8 +22,8 @@
   line-height: 1.5em;
 }
 
-h1 {
-  margin-top: 0;
+h1, h2, h3, h4 {
+  margin: 0 0 0.67em 0;
 }
 
 .wrapper {

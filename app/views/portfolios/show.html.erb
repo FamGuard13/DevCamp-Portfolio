@@ -1,14 +1,14 @@
 <div class="show">
-<section 
+  <section 
   class='headline' 
   style="background-image: url('<%= portfolio_img(@portfolio_item.main_image) %>')"
   >
-   <h1 style="color: white;" class="grid-logo"><%= @portfolio_item.title %></h1>
+    <h1 style="color: white;" class="grid-logo"><%= @portfolio_item.title %></h1>
 
- 	<%= admin_links('portfolio_path(@portfolio_item)', 'admin-links') %>
+    <%= admin_links('portfolio_path(@portfolio_item)', 'admin-links') %>
   </section>
 
-	<section class='description'>
+  <section class='description'>
     <div class='paired-image'></div>
 
     <div class='copy'>
@@ -17,13 +17,45 @@
   </section>
 
 	<%= @portfolio_item.link %>
+
+  <div class="divider"></div>
+
+  <section class="technologies">
+      <div class="tech-overview">
+      <h2>How was this Application Built?</h2>
+
+      <p><%= @portfolio_item.tech_overview %></p>
+    </div>
+
+  <div class="chart">
+    <%= pie_chart Technology.group(:name).sum(:percent_utilized), legend: "bottom", 
+                                                              donut: true, 
+                                                              width: "100%", 
+                                                              height: "400px", 
+                                                              suffix: "%"
+                                                              %>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="feature-showcase">
+    <h1>Features</h1>
+
+    <div class="features">
+      <% @portfolio_item.features.each do |feature| %>
+        <section class="feature">
+          <div class='copy't>
+            <h2><%= feature.title %></h2>
+            <p><%= feature.overview %></p>
+          </div>
+
+          <div class="paired-image">
+            <%= image_tag(feature.img) %>
+          </div>
+        </section>
+      <% end %>
+    </div>
+  </section>
 </div>
-
-<div>
-
-	<h3> Technologies Used </h3>
-
-	<% @portfolio_item.technologies.each do |t| %>
-	<p><%= t.name %></p>
-	<% end %>
-</div>
+</section>

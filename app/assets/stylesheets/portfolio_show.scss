@@ -1,0 +1,32 @@
+@import "show.scss";
+
+.show .technologies {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 50px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  grid-gap: 20px;
+}
+
+.feature-showcase h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.feature:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 650px) {
+  .show .technologies {
+    grid-template-columns: 1fr;
+  }
+}
+
+.test {
+  height: 200px;
+  width: 100%;
+}

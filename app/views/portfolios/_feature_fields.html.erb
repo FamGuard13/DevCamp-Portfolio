@@ -1,0 +1,11 @@
+<div class="form-group nested-fields">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :img, 'Demo Image' %>
+  <%= f.file_field :img %>
+
+  <%= f.label :overview, 'Feature Overview' %>
+  <%= f.text_field :overview %>
+  <%= link_to_remove_association 'Remove Technology', f %>'
+</div>

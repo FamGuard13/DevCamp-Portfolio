@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191123222456) do
+ActiveRecord::Schema.define(version: 20191203195352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "features", force: :cascade do |t|
+    t.string "title"
+    t.text "img"
+    t.text "overview"
+    t.bigint "portfolio_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["portfolio_id"], name: "index_features_on_portfolio_id"
+  end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
@@ -51,6 +61,8 @@ ActiveRecord::Schema.define(version: 20191123222456) do
     t.datetime "updated_at", null: false
     t.integer "position"
     t.text "link"
+    t.string "category"
+    t.text "tech_overview"
   end
 
   create_table "schools", force: :cascade do |t|
@@ -80,6 +92,7 @@ ActiveRecord::Schema.define(version: 20191123222456) do
     t.bigint "portfolio_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "percent_utilized"
     t.index ["portfolio_id"], name: "index_technologies_on_portfolio_id"
   end
 
@@ -102,5 +115,6 @@ ActiveRecord::Schema.define(version: 20191123222456) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "features", "portfolios"
   add_foreign_key "technologies", "portfolios"
 end

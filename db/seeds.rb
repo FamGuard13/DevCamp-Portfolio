@@ -33,6 +33,7 @@ puts "5 skills created"
         subtitle: "Ruby on Rails",
         link: '',
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        tech_overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         main_image: "http://via.placeholder.com/600x400",
         thumb_image: "http://via.placeholder.com/350x200",
         )
@@ -44,6 +45,7 @@ end
         subtitle: "Angular",
         link: '',
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        tech_overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         main_image: "https://source.unsplash.com/random",
         thumb_image: "https://source.unsplash.com/random",
         )
@@ -51,13 +53,25 @@ end
 
 puts "6 portfolio's created"
 
-3.times do |technology|
-   Portfolio.last.technologies.create!(
-       name: "Technology #{technology}",
-       ) 
+Portfolio.all.count do |portfolio_item|
+  ['Ruby on Rails', 'Ruby', 'HTML', 'CSS', 'Javascript'].each_with_index do |tech, index|
+      Portfolio.find(portfolio_item.id).technologies.create!(
+        name: tech,
+        percent_utilized: ((index + 1) * 6.667).round,
+      )
+  end
+
+  3.times do |feature|
+    Portfolio.find(portfolio_item.id).features.create!(
+      title: "Title: #{feature}",
+      img: 'https://source.unsplash.com/random',
+      overview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    )
+  end
 end
 
-puts "3 tech's Created!"
+puts "Tech's Created!"
+puts 'Features added'
 
 ['Botegga', 'The Odin Project'].each do |school|
     School.create!(
