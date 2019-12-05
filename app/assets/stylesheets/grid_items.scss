@@ -4,7 +4,7 @@
 
 .grid-sort-section {
   display: grid;
-  grid-gap: 50px;
+  grid-gap: 3.125vw;
   place-items: center;
   align-content: center;
   padding: 3vw;
@@ -121,7 +121,7 @@
   width: 100%;
   color: white;
   transition: transform 250ms ease-out;
-  transform: translateY(42%);
+  transform: translateY(43%);
 }
 
 .grid-sort ul:hover > .content {
@@ -135,8 +135,7 @@
 .grid-sort ul #logo {
   margin: 1.5%;
   width: 45%;
-  max-height: 100px;
-  min-width: 150px;
+  min-width: 265px;
   object-fit: cover;
 }
 
@@ -216,5 +215,9 @@
 
   #skillset .graphic {
     display: none;
+  }
+
+  .grid-sort > a {
+    margin: 10px;
   }
 }

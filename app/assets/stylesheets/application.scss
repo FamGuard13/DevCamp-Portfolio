@@ -52,13 +52,13 @@ section {
 }
 
 @media screen and (min-width: 650px) {
-  main {
+  main > * {
     padding-top: 50px;
   }
 }
 
 @media screen and (max-width: 650px) {
-  main {
+  main > * {
     padding-bottom: 50px;
   }
 }

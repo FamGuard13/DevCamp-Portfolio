@@ -1,22 +1,24 @@
-<section class='grid-sort-section' id='portfolio'>
-  <h1 class='title'>Here are some of my Projects</h1>
+<div class="portfolio-main">
+  <section class='grid-sort-section' id='portfolio'>
+    <h1 class='title'>Here are some of my Projects</h1>
 
-  <div class="grid-sort <%= "sortable" if logged_in?(:site_admin) %>">
-    <% @portfolio_items.each do |portfolio_item| %>
-      <%= link_to(portfolio_show_path(portfolio_item)) do%>
-          <ul class='portfolio-item' data-id='<%= portfolio_item.id %>'>
+    <div class="grid-sort <%= "sortable" if logged_in?(:site_admin) %>">
+      <% @portfolio_items.each do |portfolio_item| %>
+        <%= link_to(portfolio_show_path(portfolio_item)) do%>
+            <ul class='portfolio-item' data-id='<%= portfolio_item.id %>'>
 
-            <li class='background'>
-              <%= image_tag(portfolio_img(portfolio_item.thumb_image), class: 'background') %>
-            </li>
+              <li class='background'>
+                <%= image_tag(portfolio_img(portfolio_item.thumb_image), class: 'background') %>
+              </li>
 
-            <li class="content">
-              <h1 id='id'><%= portfolio_item.title %></h1>
-              <p><%= portfolio_item.subtitle %></p>
-            </li>
+              <li class="content">
+                <h1 id='id'><%= portfolio_item.title %></h1>
+                <p><%= portfolio_item.subtitle %></p>
+              </li>
 
-          </ul>
+            </ul>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-</section>
+    </div>
+  </section>
+</div>
