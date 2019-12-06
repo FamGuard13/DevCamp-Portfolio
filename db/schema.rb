@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191203195352) do
+ActiveRecord::Schema.define(version: 20191206192806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,9 @@ ActiveRecord::Schema.define(version: 20191203195352) do
     t.datetime "updated_at", null: false
     t.text "img"
     t.text "link"
+    t.text "experience"
+    t.text "description_img"
+    t.text "experience_img"
   end
 
   create_table "portfolios", force: :cascade do |t|
@@ -63,6 +66,7 @@ ActiveRecord::Schema.define(version: 20191203195352) do
     t.text "link"
     t.string "category"
     t.text "tech_overview"
+    t.text "body_img"
   end
 
   create_table "schools", force: :cascade do |t|
@@ -77,6 +81,9 @@ ActiveRecord::Schema.define(version: 20191203195352) do
     t.text "link"
     t.text "img"
     t.string "status"
+    t.text "experience"
+    t.text "description_img"
+    t.text "experience_img"
   end
 
   create_table "skills", force: :cascade do |t|

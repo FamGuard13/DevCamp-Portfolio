@@ -31,6 +31,23 @@
 
   <div class="field">
     <label class="btn btn-primary">
+      Upload Description Image <%= f.file_field :description_img, style: 'display:none;' %>
+    </label>
+  </div>
+
+  <div class="field">
+    <%= f.label :experience %>
+    <%= f.text_area :experience %>
+  </div>
+
+  <div class="field">
+    <label class="btn btn-primary">
+      Upload Experience Image <%= f.file_field :experience_img, style: 'display:none;' %>
+    </label>
+  </div>
+  
+  <div class="field">
+    <label class="btn btn-primary">
       Upload Job Image <%= f.file_field :img %>
     </label>
   </div>

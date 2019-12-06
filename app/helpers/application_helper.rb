@@ -21,7 +21,7 @@ module ApplicationHelper
   
   def login_helper
     if !current_user.is_a?(GuestUser)
-      content_tag(:li, link_to("Logout", destroy_user_session_path, method: :delete))
+      content_tag(:li, link_to("Logout", destroy_user_session_path, method: :delete), class: 'admin-logout')
     end
   end
 

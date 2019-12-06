@@ -9,7 +9,7 @@
   </section>
 
   <section class='description'>
-    <div class='paired-image'></div>
+    <%= image_tag(@portfolio_item.body_img, class:'paired-image')%>
 
     <div class='copy'>
       <%= markdown(@portfolio_item.body) %>
@@ -45,17 +45,14 @@
     <div class="features">
       <% @portfolio_item.features.each do |feature| %>
         <section class="feature">
-          <div class='copy't>
+          <div class='copy'>
             <h2><%= feature.title %></h2>
             <p><%= feature.overview %></p>
           </div>
 
-          <div class="paired-image">
-            <%= image_tag(feature.img) %>
-          </div>
+          <p><%= image_tag(feature.img, class:'paired-image') %></p>
         </section>
       <% end %>
     </div>
   </section>
 </div>
-</section>

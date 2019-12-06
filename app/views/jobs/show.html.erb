@@ -9,7 +9,7 @@
   </section>
 
   <section class='description'>
-    <div class='paired-image'></div>
+    <%= image_tag(@job.description_img, class: 'paired-image') %>
 
     <div class='copy'>
       <%= markdown(@job.description) %>
@@ -44,7 +44,7 @@
       <%= markdown(@job.description) %>
     </div>
 
-      <div class='paired-image'></div>
+    <%= image_tag(@job.experience_img, class: 'paired-image') %>
   </section>
 
   <p><%= @job.link %></p>

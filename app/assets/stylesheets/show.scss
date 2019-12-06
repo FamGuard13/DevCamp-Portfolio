@@ -55,6 +55,7 @@
 }
 
 .paired-image {
+  object-fit: cover;
   width: 20vw;
   height: 20vw;
   max-width: 400px;
@@ -66,9 +67,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  background-image: url(https://source.unsplash.com/random);
-  background-size: cover;
   box-shadow: 0px 0px 20px rgba(90, 61, 61, 0.25);
 }
 
@@ -112,7 +110,8 @@
 @media screen and (max-width: 900px) {
 
   .description,
-  .experience {
+  .experience,
+  .feature {
   flex-wrap: wrap;
   }
 }

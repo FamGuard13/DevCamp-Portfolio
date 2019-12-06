@@ -9,7 +9,7 @@
   </section>
 
   <section class='description'>
-    <div class='paired-image'></div>
+    <%= image_tag(@school.description_img, class: 'paired-image') %>
 
     <div class='copy'>
       <%= markdown(@school.description) %>
@@ -31,9 +31,8 @@
     </div>
 
     <div>
-      <h3>Attendance</h3>
-      <p><b>Start-Date:</b> <%= @school.end_date.strftime("%b, %Y") %></p>
-      <p><b>End-Date:</b> <%= @school.end_date.strftime("%b, %Y") %></p>
+      <h3>Attended</h3>
+      <p><%= @school.end_date.strftime("%b, %Y") %> - <%= @school.end_date.strftime("%b, %Y") %></p>
     </div>
   </section>
 
@@ -41,10 +40,10 @@
 
   <section class="experience">
     <div class='copy'>
-      <%= markdown(@school.description) %>
+      <%= markdown(@school.experience) %>
     </div>
 
-      <div class='paired-image'></div>
+    <%= image_tag(@school.experience_img, class: 'paired-image') %>
   </section>
 
   <p><%= @school.link %></p>

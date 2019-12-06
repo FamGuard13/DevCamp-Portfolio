@@ -36,6 +36,7 @@ puts "5 skills created"
         tech_overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         main_image: "http://via.placeholder.com/600x400",
         thumb_image: "http://via.placeholder.com/350x200",
+        body_img: 'https://source.unsplash.com/random'
         )
 end        
 
@@ -48,6 +49,7 @@ end
         tech_overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         main_image: "https://source.unsplash.com/random",
         thumb_image: "https://source.unsplash.com/random",
+        body_img: 'https://source.unsplash.com/random'
         )
 end 
 
@@ -64,7 +66,7 @@ Portfolio.all.count do |portfolio_item|
   3.times do |feature|
     Portfolio.find(portfolio_item.id).features.create!(
       title: "Title: #{feature}",
-      img: 'https://source.unsplash.com/random',
+      img: "https://source.unsplash.com/random",
       overview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     )
   end
@@ -78,10 +80,13 @@ puts 'Features added'
         name: "#{school}",
         logo: 'https://source.unsplash.com/random',
         img: 'https://source.unsplash.com/random',
+        experience_img: 'https://source.unsplash.com/random',
+        description_img: 'https://source.unsplash.com/random',
         status: 'Currently Attending',
         link: '',
         location: 'Online',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        experience: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         start_date: '2007-11-19',
         end_date: '2007-11-19',
     )
@@ -94,9 +99,12 @@ puts "Created 3 Schools"
         name: "Job: #{job}",
         logo: 'https://source.unsplash.com/random',
         img: 'https://source.unsplash.com/random',
+        experience_img: 'https://source.unsplash.com/random',
+        description_img: 'https://source.unsplash.com/random',
         link: '',
         location: 'Online',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        experience: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         title: "Title: #{job}",
         start_date: '2007-11-19',
         end_date: '2007-11-19',
