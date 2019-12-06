@@ -1,11 +1,3 @@
-@import 'cssremedy-rails';
-@import "font-awesome";
-@import "gritter";
-@import "nav.scss";
-@import "pages.scss";
-@import "grid_items.scss";
-@import "portfolio_show.scss";
-
 body {
   background-color: #fafafa;
 }
@@ -14,7 +6,16 @@ body {
   --transform-shift:0vw;
   --nav-color: #333333;
   --swipe-transition: 0ms;
+  --vh: 100vh;
 }
+
+@import 'cssremedy-rails';
+@import "font-awesome";
+@import "gritter";
+@import "nav.scss";
+@import "pages.scss";
+@import "grid_items.scss";
+@import "portfolio_show.scss";
 
 * {
   padding: 0;

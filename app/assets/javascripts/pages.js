@@ -1,26 +1,10 @@
 document.addEventListener('turbolinks:load', () => { 
   if (window.location.pathname === '/') {
+    let vh = window.innerHeight * 0.01;
     let touchDevice;
+
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
    
-
-    window.addEventListener('touchstart', () => {
-      const navLink = document.querySelectorAll('.nav-link');
-      touchDevice = true;
-      
-      if (window.location.pathname === '/' && window.innerWidth > 651) {
-
-        console.log('true')
-        navLink.forEach(link => {
-          let content = link.lastChild.textContent
-
-          link.removeChild
-
-          link.innerHTML = `<p>${content}</p>`
-        })
-      }
-    })
-  
-
     const mobileSwipe = () => {
       const main = document.querySelector('main');
       const homeSection = getComputedStyle(document.body).getPropertyValue('--transform-shift');
@@ -36,7 +20,6 @@ document.addEventListener('turbolinks:load', () => {
           pointerActive = true;
           start = e.clientX;
         });
-      
         
         main.addEventListener('pointermove', (e) => {
           if (pointerActive === true) {
@@ -75,11 +58,27 @@ document.addEventListener('turbolinks:load', () => {
   
     const desktopHover = () => {
       const navLink = document.querySelectorAll('.nav-link');
+
+      window.addEventListener('touchstart', () => {
+        const navLink = document.querySelectorAll('.nav-link');
+        touchDevice = true;
+        
+        if (window.location.pathname === '/' && window.innerWidth > 651) {
+  
+          console.log('true')
+          navLink.forEach(link => {
+            let content = link.lastChild.textContent
+  
+            link.removeChild
+  
+            link.innerHTML = `<p>${content}</p>`
+          })
+        }
+      })
   
       navLink.forEach(link =>  {
         if (touchDevice && window.innerWidth > 651) {
           link.addEventListener('touchstart', () => {
-            fixLinksOnTouchDevices();
             transitionPage();
           } )
         } else {
