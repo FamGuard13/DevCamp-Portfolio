@@ -52,6 +52,12 @@ nav .active {
   flex-shrink: 1;
 }
 
+.admin-logout {
+  position: fixed;
+  top: 2px;
+  right: 10px;
+}
+
 @media screen and (max-width: 650px) {
   nav,
   nav ul {
