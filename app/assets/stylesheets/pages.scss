@@ -32,8 +32,6 @@
   grid-template-columns: 5fr minmax(380px, 4fr);
   grid-template-rows: repeat(2, 2fr) 1fr;
   height: 100vh;
-  color: white;
-  background-color: #5F259F;
   position: relative;
 }
 
@@ -52,13 +50,14 @@
   grid-row: 1 / -2;
   display: grid;
   grid-row-gap: 1.5625vw;
-  background: rgba(54, 69, 79, .8);
+  background: #fafafa;
   padding: 15px 30px;
   border-radius: 10px;
-  box-shadow: -5px 5px 10px rgba(0,0,0, .2);
+  box-shadow: 0px 0px 10px rgba(0,0,0, .25);
   margin: 0 15px;
   z-index: 1;
   width: 90%;
+  max-width: 600px;
 }
 
 .home-section .section-title {
@@ -88,6 +87,16 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 90% 40%, 100% 100%, 0% 100%, 20% 100%, 0 100%, 0 48%);
+  position: relative;
+}
+
+.home-section img::after {
+  content: 'asdf';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: black;
 }
 
 .home-section .content {
@@ -103,9 +112,10 @@
   cursor: pointer;
   padding: 10px 25px;
   border-radius: 50px;
-  background-color: black;
-  color: white;
-  box-shadow: -5px 5px 10px rgba(0,0,0, .2);
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  box-shadow: 0px 0px 10px rgba(0,0,0, .25);
   border: black;
   height: 100%;
   width: 100%;
@@ -113,7 +123,7 @@
 }
 
 .home-section .button {
-  margin-bottom: 20vh;
+  margin-bottom: 25vh;
   height: 50px;
   border-radius: 50px;
   z-index: 1;
@@ -121,10 +131,25 @@
   align-self: start;
 }
 
-@media screen and (max-width: 1244px) {
+@media screen and (min-width: 1244px) {
   .home-section .section-title,
   .home-section .section-title h1 {
     font-size: 31.1px;
+  }
+
+  .home-section .section-title h2 {
+    font-size: 20px;
+  }
+
+  .home-section .content {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .home-section .section-title,
+  .home-section .section-title h1 {
+    font-size: 25px;
   }
 
   .home-section .section-title h2 {
@@ -141,7 +166,6 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    transition: opacity 350ms ease-in;
   }
 
   .about,
@@ -150,6 +174,12 @@
   .contact {
     opacity: 0;
     z-index: 0;
+  }
+}
+
+@media screen and (min-width: 652px) {
+  .home-section {
+    transition: opacity 350ms ease-in;
   }
 }
 
@@ -163,13 +193,9 @@
     flex: 150px 1 1;
     margin: 10px 0;
   }
-
-  .home-section .button {
-    margin-bottom: 20vh;
-  }
 }
 
-@media screen and (max-width: 650px) and (orientation: portrait) {
+@media screen and (max-width: 650px) {
   .home-main {
     display: flex;
     justify-content: flex-start;
