@@ -14,10 +14,11 @@ class Portfolio < ApplicationRecord
                                   attrs['overview'].blank?
                                   }
   
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :body_img, :main_image, :thumb_image, :tech_overview, :link
   
   mount_uploader :thumb_image, ImageUploader
   mount_uploader :main_image, ImageUploader
+  mount_uploader :body_img, ImageUploader
   
   def self.by_position
     order("position ASC")
@@ -25,4 +26,3 @@ class Portfolio < ApplicationRecord
   
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails')}
 end
-# , :main_image, :thumb_image
