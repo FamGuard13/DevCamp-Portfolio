@@ -1,5 +1,26 @@
-document.addEventListener('turbolinks:load', () => {
-  if (window.location.pathname == '/') {
+document.addEventListener('turbolinks:load', () => { 
+  if (window.location.pathname === '/') {
+    let touchDevice;
+   
+
+    window.addEventListener('touchstart', () => {
+      const navLink = document.querySelectorAll('.nav-link');
+      touchDevice = true;
+      
+      if (window.location.pathname === '/' && window.innerWidth > 651) {
+
+        console.log('true')
+        navLink.forEach(link => {
+          let content = link.lastChild.textContent
+
+          link.removeChild
+
+          link.innerHTML = `<p>${content}</p>`
+        })
+      }
+    })
+  
+
     const mobileSwipe = () => {
       const main = document.querySelector('main');
       const homeSection = getComputedStyle(document.body).getPropertyValue('--transform-shift');
@@ -9,20 +30,26 @@ document.addEventListener('turbolinks:load', () => {
       let currentPosition = Number(homeSection.split('').slice(0, -2).join(''));
       let viewWidth = 0;
       let newPosition = 0;
+      let pointerActive;
       
-        main.addEventListener('touchstart', (e) => {
-          start = e.touches[0].clientX;
+        main.addEventListener('pointerdown', (e) => {
+          pointerActive = true;
+          start = e.clientX;
         });
       
-        main.addEventListener('touchmove', (e) => {
-          shift = e.touches[0].clientX - start;
-          viewWidth = (shift / screen.width) * 100;
-          newPosition = currentPosition + viewWidth;
-    
-          document.documentElement.style.setProperty(`--transform-shift`, `${newPosition}vw`)
+        
+        main.addEventListener('pointermove', (e) => {
+          if (pointerActive === true) {
+            shift = e.clientX - start;
+            viewWidth = (shift / screen.width) * 100;
+            newPosition = currentPosition + viewWidth;
+      
+            document.documentElement.style.setProperty(`--transform-shift`, `${newPosition}vw`);
+          }
         });
       
-        main.addEventListener('touchend', (e) => {
+        main.addEventListener('pointerup', (e) => {
+          pointerActive = false;
           let positionDifference = currentPosition - newPosition;
           currentPosition = newPosition;
       
@@ -50,13 +77,20 @@ document.addEventListener('turbolinks:load', () => {
       const navLink = document.querySelectorAll('.nav-link');
   
       navLink.forEach(link =>  {
-        link.addEventListener('mouseenter', transitionPage)
+        if (touchDevice && window.innerWidth > 651) {
+          link.addEventListener('touchstart', () => {
+            fixLinksOnTouchDevices();
+            transitionPage();
+          } )
+        } else {
+          link.addEventListener('mouseenter', transitionPage)
+        }
       })
   
       window.addEventListener('resize', resetOpacity);
     }
    
-    function transitionPage() {
+    function transitionPage() { 
       const homeSections = document.querySelectorAll('.home-section');
       const menuSection = document.querySelector(`${this.dataset.tag}`);
   
