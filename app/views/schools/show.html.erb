@@ -32,7 +32,7 @@
 
     <div>
       <h3>Attended</h3>
-      <p><%= @school.end_date.strftime("%b, %Y") %> - 
+      <p><%= @school.start_date.strftime("%b, %Y") %> - 
       <% if @school.end_date? %>
           <%= @school.end_date.strftime("%b, %Y") %>
         <% else %>
