@@ -28,7 +28,7 @@
     </div>
 
   <div class="chart">
-    <%= pie_chart Technology.group(:name).sum(:percent_utilized), legend: "bottom", 
+    <%= pie_chart @portfolio_item.technologies.group(:name).sum(:percent_utilized), legend: "bottom", 
                                                               donut: true, 
                                                               width: "100%", 
                                                               height: "400px", 
