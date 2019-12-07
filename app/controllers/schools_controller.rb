@@ -56,8 +56,11 @@ class SchoolsController < ApplicationController
                                    :end_date,
                                    :logo,
                                    :img,
+                                   :description_img,
+                                   :experience_img,
                                    :link,
-                                   :status
+                                   :status,
+                                   :experience
                                   )
   end
 
