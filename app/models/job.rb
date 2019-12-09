@@ -5,5 +5,5 @@ class Job < ApplicationRecord
   mount_uploader :logo, ImageUploader
   mount_uploader :description_img, ImageUploader
   mount_uploader :experience_img, ImageUploader
-  
+
 end

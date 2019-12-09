@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
   def index
-    @jobs = Job.all
+    @jobs = Job.order('start_date ASC')
   end
 
   def new
