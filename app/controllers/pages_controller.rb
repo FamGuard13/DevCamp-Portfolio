@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   
   def qualifications
     @skills = Skill.all
-    @jobs = Job.order('start_date ASC')
+    @jobs = Job.order('start_date DESC')
     @schools = School.order('end_date ASC')
   end
 end
