@@ -9,7 +9,11 @@
           </li>
 
           <li class='content'>
-            <%= image_tag(img(job.logo), id: 'logo') %>
+            <% if job.logo? %>
+              <%= image_tag(img(job.logo), id: 'logo') %>
+            <% else %>
+            <h1><%= job.name %></h1> 
+            <% end %>
             <p>Location: <%= job.title %></p>
             <p>Status: <%= job.location %></p>
           </li>
