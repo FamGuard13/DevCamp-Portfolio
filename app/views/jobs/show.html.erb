@@ -32,7 +32,7 @@
 
     <div>
       <h3>Time Employed</h3>
-      <p><b>Start-Date:</b> <%= @job.end_date.strftime("%b, %Y") %> -
+      <p><%= @job.start_date.strftime("%b, %Y") %> -
       <% if @job.end_date? %>
           <%= @job.end_date.strftime("%b, %Y") %>
         <% else %>
