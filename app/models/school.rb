@@ -1,5 +1,5 @@
 class School < ApplicationRecord
-  validates_presence_of :name, :description, :start_date, :status, :location, :description_img, :experience_img, :logo, :img
+  validates_presence_of :name, :description, :start_date, :status, :location, :description_img, :experience_img, :img
 
   mount_uploader :img, ImageUploader
   mount_uploader :logo, ImageUploader
