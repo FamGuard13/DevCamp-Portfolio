@@ -12,7 +12,7 @@
             <% if job.logo? %>
               <%= image_tag(img(job.logo), id: 'logo') %>
             <% else %>
-            <h1 id="logo"><%= job.name %></h1> 
+            <h2 id="logo"><%= job.name %></h2> 
             <% end %>
             <p>Location: <%= job.title %></p>
             <p>Status: <%= job.location %></p>
