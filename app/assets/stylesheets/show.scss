@@ -75,6 +75,14 @@
   max-width: 600px;
 }
 
+.copy > * {
+  margin: 10px 0;
+}
+
+.copy ul {
+  margin-left: 50px;
+}
+
 .details {
   display: flex;
   justify-content: space-evenly;
