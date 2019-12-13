@@ -237,6 +237,7 @@
     grid-row: auto;
     height: 100%;
     width: 100%;
+    clip-path: none;
   }
 
   .home-section .section-title,
@@ -277,13 +278,27 @@
     flex-direction: row;
     min-width: 100px; 
     flex-shrink: 0;
-   }
+  }
 
-   .portfolio .section-title {
-    color: white;
-    background: linear-gradient(rgba(0, 0, 0, .9),
-                                rgba(0, 0, 0, 0));
-   }
+  .portfolio .section-title {
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, .9),
+                              rgba(0, 0, 0, 0));
+  }
+
+  #portfolio-background {
+  transform: scale(1.8);
+  object-position: left top;
+  }
+
+  #about-background {
+    transform: scale(2);
+    object-position: 70% 60%;
+  }
+
+  .home-section {
+    overflow: hidden;
+  }
 
   // Home-Page Slider Nav
 
