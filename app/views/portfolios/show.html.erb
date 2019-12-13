@@ -16,7 +16,7 @@
 
     <div class="buttons">
     <%= link_to(content_tag(:button, 'Website'), @portfolio_item.link, class: 'button') if @portfolio_item.link? %>
-    <%= link_to(content_tag(:button, 'Source-Code'), @portfolio_item.link, class: 'button') if @portfolio_item.link? %>
+    <%= link_to(content_tag(:button, 'Source-Code'), @portfolio_item.source_link, class: 'button') if @portfolio_item.source_link? %>
     </div>
     </div>
 
