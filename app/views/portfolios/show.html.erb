@@ -14,30 +14,29 @@
     <div class='copy'>
       <%= markdown(@portfolio_item.body) %>
 
-    <div class="buttons">
-    <%= link_to(content_tag(:button, 'Website'), @portfolio_item.link, class: 'button') if @portfolio_item.link? %>
-    <%= link_to(content_tag(:button, 'Source-Code'), @portfolio_item.source_link, class: 'button') if @portfolio_item.source_link? %>
+      <div class="buttons">
+        <%= link_to(content_tag(:button, 'Website'), @portfolio_item.link, class: 'button') if @portfolio_item.link? %>
+        <%= link_to(content_tag(:button, 'Source-Code'), @portfolio_item.source_link, class: 'button') if @portfolio_item.source_link? %>
+      </div>
     </div>
-    </div>
-
   </section>
 
   <div class="divider"></div>
 
   <section class="technologies copy">
-      <div class="tech-overview">
+    <div class="tech-overview">
       <h2>How was this Application Built?</h2>
 
       <p><%= markdown(@portfolio_item.tech_overview) %></p>
     </div>
 
-  <div class="chart">
-    <%= pie_chart @portfolio_item.technologies.group(:name).sum(:percent_utilized), legend: "bottom", 
-                                                              donut: true, 
-                                                              width: "100%", 
-                                                              height: "400px", 
-                                                              suffix: "%"
-                                                              %>
+    <div class="chart">
+      <%= pie_chart @portfolio_item.technologies.group(:name).sum(:percent_utilized), legend: "bottom", 
+                                                                donut: true, 
+                                                                width: "100%", 
+                                                                height: "400px", 
+                                                                suffix: "%"
+                                                                %>
     </div>
   </section>
 
