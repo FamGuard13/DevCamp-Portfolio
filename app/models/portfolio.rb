@@ -14,7 +14,7 @@ class Portfolio < ApplicationRecord
                                   attrs['overview'].blank?
                                   }
   
-  validates_presence_of :title, :body, :body_img, :main_image, :thumb_image, :tech_overview, :link
+  validates_presence_of :title, :body, :body_img, :main_image, :thumb_image, :tech_overview
   
   mount_uploader :thumb_image, ImageUploader
   mount_uploader :main_image, ImageUploader
