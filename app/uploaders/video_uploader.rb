@@ -1,4 +1,4 @@
-class FeatureUploader < CarrierWave::Uploader::Base
+class VideoUploader < CarrierWave::Uploader::Base
 
   storage :aws
 
@@ -7,7 +7,7 @@ class FeatureUploader < CarrierWave::Uploader::Base
   end
 
   def extension_whitelist
-    %w(jpg jpeg gif png svg mp4)
+    %w(mp4)
   end
 
 end

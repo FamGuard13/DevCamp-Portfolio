@@ -53,7 +53,7 @@
             <p><%= feature.overview %></p>
           </div>
 
-          <p><%= image_tag(feature.img, class:'paired-image') %></p>
+          <%= feature_visual(feature.video, feature.img) %>
         </section>
       <% end %>
     </div>
