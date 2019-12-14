@@ -15,7 +15,7 @@ class SchoolsController < ApplicationController
 
     respond_to do |format|
       if @school.save
-        format.html { redirect_to(qualifications_path, notice: 'School Created') }
+        format.html { redirect_to(school_show_path, notice: 'School Created') }
       else
         format.html { render :new }
       end
@@ -28,7 +28,7 @@ class SchoolsController < ApplicationController
   def update
     respond_to do |format|
       if @school.update(school_params)
-        format.html { redirect_to qualifications_path, notice: 'School Sucessfully updated' }
+        format.html { redirect_to school_show_path, notice: 'School Sucessfully updated' }
       else
         format.html { render :edit }
       end

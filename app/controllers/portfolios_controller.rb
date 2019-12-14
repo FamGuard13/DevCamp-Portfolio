@@ -23,7 +23,7 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
+        format.html { redirect_to portfolio_show_path, notice: 'Your portfolio item is now live.' }
       else
         format.html { render :new }
       end
