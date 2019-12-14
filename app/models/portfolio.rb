@@ -10,6 +10,7 @@ class Portfolio < ApplicationRecord
                                 allow_destroy: true,
                                 reject_if: lambda { |attrs| 
                                   attrs['title'].blank? ||
+                                  attrs['media'].blank? ||
                                   attrs['overview'].blank?
                                   }
   

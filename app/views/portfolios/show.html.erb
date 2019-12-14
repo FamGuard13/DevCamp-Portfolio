@@ -53,11 +53,11 @@
             <p><%= feature.overview %></p>
           </div>
 
-          <%= video_tag(feature.video,
+          <%= video_tag(feature.media,
                         autoplay: true,
                         loop: true,
                         muted: true,
-                        poster: feature.img,
+                        poster: feature.media,
                         class: 'paired-image') %>
         </section>
       <% end %>
