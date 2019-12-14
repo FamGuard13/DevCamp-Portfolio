@@ -6,17 +6,4 @@ module PortfoliosHelper
       'https://source.unsplash.com/random'
     end
   end
-
-  def feature_visual(vid, img)
-    if vid
-      video_tag(vid,
-        autoplay: true,
-        loop: true,
-        muted: true,
-        poster: img,
-        class: 'paired-image')
-    else
-      image_tag(img, class: 'paired-image')
-    end
-  end
 end
