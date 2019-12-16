@@ -209,6 +209,11 @@
   margin: .875vw;
 }
 
+.port-subtitle {
+  width: 75%;
+  text-align: center;
+} 
+
 @media screen and (max-width: 725px) {
   #skillset .skills {
     grid-template-columns: 1fr;
