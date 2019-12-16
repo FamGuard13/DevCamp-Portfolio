@@ -1,6 +1,6 @@
 ### What's Left
 - Home Page
-  - Copy
+  ~~Copy~~
   - Slide indicators
   - Discover More for Mobile
   - Resize Bug
