@@ -1,5 +1,3 @@
-# DevCamp Portfolio Application
-
 ### What's Left
 - Home Page
   - Copy
