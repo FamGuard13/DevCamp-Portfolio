@@ -201,11 +201,12 @@
     grid-row-end: -2;
     align-self: end;
     padding: 10px;
+    margin-bottom: 20px;
   }
 
   .home-section .button {
     grid-row-end: -1;
-    display: none;
+    grid-column: 1 / -1;
     margin-bottom: 0;
   }
 

@@ -1,8 +1,8 @@
 ### What's Left
 - Home Page
-  ~~Copy~~
+  - ~~Copy~~
   - Slide indicators
-  - Discover More for Mobile
+  - ~~Discover More for Mobile~~
   - Resize Bug
 
 - About Page
