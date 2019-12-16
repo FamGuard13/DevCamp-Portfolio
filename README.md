@@ -1,20 +1,26 @@
 # DevCamp Portfolio Application
 
-### Features
+### What's Left
+- Home Page
+  - Copy
+  - Slide indicators
+  - Discover More for Mobile
+  - Resize Bug
 
-- Real time chat engine for comments
-- Blog
-- Portfolio
-- Drag and drop interface
+- About Page
+  - Change details infor on hover (Schools & Jobs)
+  - Add Soft-Skills with Tech Skills
 
-### Code Example
+- Portfolio Show Pages
+  - Finish Copy
+  - Add Features
 
-```ruby
-def my_great_method
-  puts "here it is"
-end
-```
+- Contact
+  - Build Contact Form
+  - Organize Contact Information
 
-```javascript
-alert('Hi there')
-```
+### Future Plans
+- Application Tracking System
+- Job Opportunity Sharing form
+- Personal touches based on job applied for when Visiting Portfolio
+- Organize Portfolio Projects into Categories (Add/Choose new projects to display)
