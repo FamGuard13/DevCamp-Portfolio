@@ -20,6 +20,10 @@
   flex-direction: row-reverse;
 }
 
+.show .headline {
+  background-position: 80% center;
+}
+
 @media screen and (max-width: 650px) {
   .show .technologies {
     grid-template-columns: 1fr;
