@@ -15,6 +15,7 @@
 -Qualifications Page
   - ~~Change details info on hover (Schools & Jobs)~~
   - Add Soft-Skills with Tech Skills
+  - Add Proper photos for Jobs
 
 - Portfolio Show Pages
   - Finish Copy
