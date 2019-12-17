@@ -11,6 +11,7 @@
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 25px;
   place-items: center;
+  align-self: center;
 }
 
 .contact .section-wrapper h1,
@@ -44,4 +45,15 @@
 .contact .social-buttons .fab {
   font-size: 25px;
   color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .contact .section-wrapper {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .contact .social-buttons h2 {
+    text-align: left;
+  }
 }
