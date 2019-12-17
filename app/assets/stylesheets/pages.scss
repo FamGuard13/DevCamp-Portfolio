@@ -280,6 +280,40 @@
 
   // Home-Page Slider Nav
 
+  .home-nav .nav-bar {
+    position: relative;
+  }
+  
+  .home-nav .nav-bar::before,
+  .home-nav .nav-bar::after,
+  .home-nav .nav-items .nav-link::before,
+  .home-nav .nav-items .nav-link::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 60px;
+  }
+
+  .home-nav .nav-bar::after {
+    right: 70px;
+  }
+
+  .home-nav .nav-items .nav-link::before {
+    transform:translateY(50%) rotate(-135deg);
+    left: 25%;
+    bottom: 50%;
+  }
+
+  .home-nav .nav-items .nav-link::after {
+    transform: translateY(50%) rotate(45deg);
+    bottom: 50%;
+    right: 25%;
+  }
+
   .home-nav {
     bottom: 0;
     background: #333333;
