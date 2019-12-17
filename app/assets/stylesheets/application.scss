@@ -9,6 +9,7 @@ body {
   --vh: 100vh;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
 @import 'cssremedy-rails';
 @import "font-awesome";
 @import "gritter";
@@ -25,6 +26,14 @@ body {
 
 h1, h2, h3, h4 {
   margin: 0 0 0.67em 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+p,
+button,
+a,
+ul  {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .wrapper {

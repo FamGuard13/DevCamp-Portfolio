@@ -1,4 +1,7 @@
 ### What's Left
+- Site wide
+  - Add Font
+  
 - Home Page
   - ~~Copy~~
   - ~~Slide indicators~~
