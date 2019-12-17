@@ -20,7 +20,7 @@
 
 - Contact
   - Build Contact Form
-  - Organize Contact Information
+  - ~~Organize Contact Information~~
 
 ### Future Plans
 - Application Tracking System
