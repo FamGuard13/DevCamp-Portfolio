@@ -11,12 +11,14 @@ body {
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
 @import 'cssremedy-rails';
+@import "font-awesome-sprockets";
 @import "font-awesome";
 @import "gritter";
 @import "nav.scss";
 @import "pages.scss";
 @import "grid_items.scss";
 @import "portfolio_show.scss";
+@import "contact.scss";
 
 * {
   padding: 0;

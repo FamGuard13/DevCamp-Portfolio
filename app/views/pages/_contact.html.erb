@@ -3,6 +3,24 @@
 
   <div class="section-wrapper">
     <h1 class="section-title">Let's Chat</h1>
+
+    <div class="phone">
+      <h2>Call or Text</h2>
+      <p><%= number_to_phone "3852294959" %></p>
+    </div>
+
+    <div class="email">
+      <h2>Email</h2>
+
+      <p>Harmtan2@gmail.com</p>
+    </div>
+
+      <div class="social-buttons">
+      <h2>Message Me</h2>
+        <%= link_to(icon('fab', 'facebook-messenger'), 'https://www.facebook.com/messages/t/tanner.harman/', target: :_blank) %>
+
+        <%= link_to(icon('fab', 'linkedin'), 'https://www.linkedin.com/in/tanner-harman-3182a08b/', target: :_blank) %>
+      </div>
   </div>
 </section>
 

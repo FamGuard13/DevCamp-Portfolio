@@ -1,0 +1,47 @@
+.contact-main *{
+  z-index: 1;
+  opacity: 1;
+}
+
+.contact-main .section-wrapper {
+  grid-row: 1/-1;
+}
+
+.contact .section-wrapper {
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 25px;
+  place-items: center;
+}
+
+.contact .section-wrapper h1,
+.contact .social-buttons {
+  grid-column: 1/-1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact .section-wrapper > * h2 {
+  margin: 0px;
+}
+
+.contact .social-buttons h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.social-buttons a {
+  background: #4267B2;
+  margin: 10px;
+  padding: 10px 50px;
+  border-radius: 50px;
+}
+
+.social-buttons a:last-child{
+  background: #4875B4;
+}
+
+.contact .social-buttons .fab {
+  font-size: 25px;
+  color: white;
+}
