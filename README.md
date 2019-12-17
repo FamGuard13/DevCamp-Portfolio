@@ -1,7 +1,8 @@
 ### What's Left
 - Site wide
-  - Add Font
-  
+  - ~~Add Font~~
+  - Optimize for Mobile Layout
+
 - Home Page
   - ~~Copy~~
   - ~~Slide indicators~~
