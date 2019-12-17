@@ -1,12 +1,13 @@
 ### What's Left
 - Home Page
   - ~~Copy~~
-  - Slide indicators
+  - ~~Slide indicators~~
   - ~~Discover More for Mobile~~
   - Resize Bug
 
 - About Page
-  - Change details infor on hover (Schools & Jobs)
+  - Change details info on hover (Schools & Jobs)
+  - Add Hobbies
   - Add Soft-Skills with Tech Skills
 
 - Portfolio Show Pages

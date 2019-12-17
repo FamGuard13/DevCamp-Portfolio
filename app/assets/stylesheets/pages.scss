@@ -295,23 +295,28 @@
     border-right: 1px solid white;
     transform: rotate(45deg);
     position: absolute;
-    right: 60px;
+    right: 22%;
   }
 
   .home-nav .nav-bar::after {
-    right: 70px;
+    right: 19%;
   }
 
   .home-nav .nav-items .nav-link::before {
     transform:translateY(50%) rotate(-135deg);
-    left: 25%;
+    left: 22%;
     bottom: 50%;
   }
 
   .home-nav .nav-items .nav-link::after {
     transform: translateY(50%) rotate(45deg);
     bottom: 50%;
-    right: 25%;
+    right: 22%;
+  }
+
+  .nav-items >.nav-link:last-child::after {
+    transform: translateY(50%) rotate(-135deg);
+    left: 19%;
   }
 
   .home-nav {
