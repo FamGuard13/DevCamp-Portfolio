@@ -10,8 +10,10 @@
   - Resize Bug
 
 - About Page
-  - Change details info on hover (Schools & Jobs)
   - Add Hobbies
+
+-Qualifications Page
+  - ~~Change details info on hover (Schools & Jobs)~~
   - Add Soft-Skills with Tech Skills
 
 - Portfolio Show Pages

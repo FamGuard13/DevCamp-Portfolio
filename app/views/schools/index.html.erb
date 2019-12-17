@@ -11,8 +11,9 @@
 
           <li class="content">
             <%= image_tag(img(school.logo), id: 'logo') || school.title %>
-            <p>Location: <%= school.location %></p>
-            <p>Status: <%= school.status %></p>
+            <p>Attended <%= school.location %></p>
+            <p><%= school.status %></p>
+            <p><%= "#{school.start_date.strftime("%b, %Y")} - #{school_end_date(school)}"%></p>
           </li>
         </ul>
     <% end %>

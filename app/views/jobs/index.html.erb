@@ -12,10 +12,11 @@
             <% if job.logo? %>
               <%= image_tag(img(job.logo), id: 'logo') %>
             <% else %>
-            <h2 id="logo"><%= job.name %></h2> 
+              <h2 id="logo"><%= job.name %></h2> 
             <% end %>
-            <p>Location: <%= job.title %></p>
-            <p>Status: <%= job.location %></p>
+            <p>Position of <%= job.title%></p>
+            <p>Worked in <%= job.location %></p>
+            <p><%= "#{job.start_date.strftime("%b, %Y")} - #{job_end_date(job)}"%></p>
           </li>
         </ul>
     <% end %>
