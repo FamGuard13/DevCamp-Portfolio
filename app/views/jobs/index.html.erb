@@ -14,8 +14,8 @@
             <% else %>
               <h2 id="logo"><%= job.name %></h2> 
             <% end %>
-            <p>Position of <%= job.title%></p>
-            <p>Worked in <%= job.location %></p>
+            <p><%= job.title%></p>
+            <p><%= job.location %></p>
             <p><%= "#{job.start_date.strftime("%b, %Y")} - #{job_end_date(job)}"%></p>
           </li>
         </ul>
