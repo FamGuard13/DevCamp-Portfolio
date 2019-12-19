@@ -54,7 +54,7 @@
           <section class="feature">
             <div class='copy'>
               <h2><%= feature.title %></h2>
-              <p><%= feature.overview %></p>
+              <p><%= markdown(feature.overview) %></p>
             </div>
 
             <%= video_tag(feature.media,
