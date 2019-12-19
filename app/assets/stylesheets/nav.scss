@@ -92,6 +92,8 @@ nav .active {
         -ms-flex-direction: column;
             flex-direction: column;
     bottom: 0;
+    height: auto;
+    transform: translateY(175px);
   }
 
   nav {
