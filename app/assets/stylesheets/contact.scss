@@ -17,9 +17,14 @@
 .contact .section-wrapper h1,
 .contact .social-buttons {
   grid-column: 1/-1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact .section-wrapper > * h2 {

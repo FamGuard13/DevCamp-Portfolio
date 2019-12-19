@@ -8,12 +8,15 @@ section {
   background-size: cover;
   background-position: 35% 20%;
   padding: 1.56vw;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section .content {
   display: grid;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   grid-row-gap: 20px;
   height: 97%;
   padding: 5.25vw;
@@ -22,7 +25,8 @@ section .content {
   z-index: 2;
   border-radius: 10px;
   position: relative;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
 section .content::after {
@@ -31,19 +35,23 @@ section .content::after {
   border: .5px solid rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   background-color: rgba(71, 71, 71, .35);
-  box-shadow: 0 0 15px rgba(194, 185, 185, 0.25);
+  -webkit-box-shadow: 0 0 15px rgba(194, 185, 185, 0.25);
+          box-shadow: 0 0 15px rgba(194, 185, 185, 0.25);
   z-index: -1;
 
   width: calc(100% - 6.25vw);
   height: calc(100% - 6.25vw);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .bio {
   grid-template-columns: 5fr minmax(380px, 4fr);
-  justify-content: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .bio .content {
@@ -56,7 +64,9 @@ section .content::after {
 
 .journey {
   grid-template-columns: 5fr minmax(380px, 4fr);
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 
   background: image-url('daniel-von-appen-tb4heMa-ZRo-unsplash.jpg');
   background-size: cover;
@@ -66,7 +76,8 @@ section .content::after {
 .journey .content,
 .journey img {
   border: 2px solid rgba(255, 255, 255, 1);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
 
@@ -98,7 +109,9 @@ section .content::after {
     height: auto;
     min-height: 90vh;
     grid-template-columns: 1fr;
-    align-items: end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
   }
 
   .journey .content,
