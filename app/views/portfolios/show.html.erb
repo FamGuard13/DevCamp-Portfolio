@@ -9,8 +9,8 @@
   </section>
 
   <section class='description'>
+        <%= image_tag(@portfolio_item.body_img, class:'paired-image')%>
     <div class='copy'>
-      <%= image_tag(@portfolio_item.body_img, class:'paired-image')%>
       <%= markdown(@portfolio_item.body) %>
 
       <div class="buttons">
@@ -53,14 +53,15 @@
           <section class="feature">
             <div class='copy'>
               <h2><%= feature.title %></h2>
-              <%= video_tag(feature.media,
+              <p><%= markdown(feature.overview) %></p>
+            </div>
+
+            <%= video_tag(feature.media,
                           autoplay: true,
                           loop: true,
                           muted: true,
                           poster: feature.media,
                           class: 'paired-image') %>
-              <p><%= markdown(feature.overview) %></p>
-            </div>
           </section>
         <% end %>
       </div>
