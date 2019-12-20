@@ -95,6 +95,8 @@
 }
 
 .copy {
+  display: flex;
+  flex-direction: column;
   margin: 25px;
   max-width: 600px;
 }
@@ -178,5 +180,24 @@
   .feature {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .copy h1 {
+    order: 1;
+  }
+
+  .copy img {
+    order: 2;
+  }
+
+  .copy p {
+    order: 3;
+  }
+  
+  .copy .buttons {
+    order: 4;
   }
 }
