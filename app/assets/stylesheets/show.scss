@@ -1,5 +1,5 @@
 .show section {
-  padding: 50px 0;
+  padding: 50px 10px;
 }
 
 .show .headline {
@@ -63,62 +63,43 @@
 .feature {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: grid;
+  grid-gap: 20px;
+  justify-content: center;
+  align-content: start;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
 }
 
 .paired-image {
   height: 20vw;
   max-height: 400px;
   min-height: 300px;
-  margin: 25px;
 
-  display: -webkit-box;
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
 
-  display: -ms-flexbox;
-
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-shadow: 0px 0px 20px rgba(90, 61, 61, 0.25);
           box-shadow: 0px 0px 20px rgba(90, 61, 61, 0.25);
+  justify-self: end;
+}
+
+.description .buttons {
+  grid-column: 2/-1;
+  display: flex;
+  align-self: end;
+}
+
+.description .buttons a {
+  margin: 0 10px 0 0;
 }
 
 .copy {
-  margin: 25px;
   max-width: 600px;
-}
-
-.copy > * {
-  margin: 10px 0;
 }
 
 .copy ul {
   margin-left: 50px;
-}
-
-.copy .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.copy .buttons .button {
-  margin: 15px;
-  margin-left: 0;
 }
 
 .details {
@@ -171,31 +152,46 @@
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 900px) {
-
-  .description,
-  .experience,
-  .feature {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (max-width: 1230px) {
+  .description .paired-image,
+  .experience.paired-imagey,
+  .feature .paired-image {
+    width: 100%;
+    max-width: 575px;
+    height: auto;
+    min-height: auto;
+    max-height: auto;
+    align-self: center;
   }
 }
 
-@media screen and (max-width: 650px) {
-
-  .copy h1 {
-    order: 1;
+@media screen and (max-width: 950px) {
+  .description,
+  .experience,
+  .feature {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3 ,auto);
   }
 
-  .copy img {
-    order: 2;
+  .description .copy,
+  .experience .copy,
+  .feature .copy {
+    grid-row: 1 / 2;
+    grid-column: 1/-1;
   }
 
-  .copy p {
-    order: 3;
+  .description .paired-image,
+  .experience.paired-imagey,
+  .feature .paired-image {
+    grid-row: 2 / 3;
+    grid-column: 1/-1;
+    justify-self: start;
   }
-  
-  .copy .buttons {
-    order: 4;
+
+  .description .buttons,
+  .experience .buttons,
+  .feature .buttons {
+    grid-row: 3 / -1;
+    grid-column: 1/-1;
   }
 }

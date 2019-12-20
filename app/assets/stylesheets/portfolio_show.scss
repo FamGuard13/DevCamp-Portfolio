@@ -16,15 +16,20 @@
   text-align: center;
 }
 
-.feature:nth-child(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
 .show .headline {
   background-position: left 40%;
+}
+
+@media screen and (min-width: 950px) {
+  .feature:nth-child(even) .copy {
+    grid-column: 1 / 2;
+    justify-self: end;
+  }
+  
+  .feature:nth-child(even) .paired-image {
+    grid-column: 2 / 3;
+    justify-self: start;
+  }
 }
 
 @media screen and (max-width: 650px) {
