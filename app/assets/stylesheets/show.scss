@@ -66,14 +66,9 @@
   display: grid;
   grid-gap: 20px;
   justify-content: center;
-  align-content: start;
   align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-}
-
-.feature .copy {
-  grid-row: 1 / -1;
 }
 
 .paired-image {
@@ -99,6 +94,10 @@
   margin: 0 10px 0 0;
 }
 
+.description .copy {
+  align-self: start;
+}
+
 .copy {
   max-width: 600px;
 }
@@ -110,6 +109,10 @@
 
 .copy ul {
   margin-left: 1.6vw;
+}
+
+.feature .copy {
+  grid-row: 1 / -1;
 }
 
 .details {

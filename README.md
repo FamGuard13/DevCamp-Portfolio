@@ -1,7 +1,11 @@
 ### What's Left
 - Site wide
   - ~~Add Font~~
-  - Optimize for Mobile Layout
+  - ~~Optimize for Mobile Layout~~
+  - Add Intersection oberserver
+    - Lazy Loading videos/images
+    - Start/Stop Videos
+    - Hover affect on centered blocks
 
 - Home Page
   - ~~Copy~~
@@ -15,11 +19,11 @@
 -Qualifications Page
   - ~~Change details info on hover (Schools & Jobs)~~
   - Add Soft-Skills with Tech Skills
-  - Add Proper photos for Jobs
+  - ~~Add Proper photos for Jobs~~
 
 - Portfolio Show Pages
-  - Finish Copy
-  - Add Features
+  - ~~Finish Copy~~
+  - ~~Add Features~~
 
 - Contact
   - Build Contact Form
