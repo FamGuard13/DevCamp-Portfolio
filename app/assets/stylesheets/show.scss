@@ -67,8 +67,13 @@
   grid-gap: 20px;
   justify-content: center;
   align-content: start;
+  align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
+}
+
+.feature .copy {
+  grid-row: 1 / -1;
 }
 
 .paired-image {
