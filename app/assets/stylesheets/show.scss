@@ -103,8 +103,13 @@
   max-width: 600px;
 }
 
+.copy p,
 .copy ul {
-  margin-left: 50px;
+  margin: 5px;
+}
+
+.copy ul {
+  margin-left: 1.6vw;
 }
 
 .details {
