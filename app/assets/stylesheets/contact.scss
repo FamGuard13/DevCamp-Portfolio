@@ -1,14 +1,9 @@
-.contact-main *{
-  z-index: 1;
-  opacity: 1;
-}
-
-.contact-main .home-section {
-  height: calc(100vh - 50px);
-}
-
 .contact-main .section-wrapper {
   grid-row: 1/-1;
+}
+
+#contact-page {
+  opacity: 1;
 }
 
 .contact .section-wrapper {

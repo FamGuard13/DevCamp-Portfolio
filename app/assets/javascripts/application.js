@@ -12,7 +12,6 @@
 //= require jquery
 //= require rails-ujs
 //= require jquery-ui
-//= require html.sortable
 //= require pages.js
 //= require cocoon
 //= require gritter

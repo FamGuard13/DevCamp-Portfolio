@@ -1,6 +1,7 @@
-document.addEventListener('turbolinks:load', () => { 
+document.addEventListener('turbolinks:load', () => {
+  let vh = window.innerHeight * 0.01;
+
   if (window.location.pathname === '/') {
-    let vh = window.innerHeight * 0.01;
     let touchDevice;
 
     document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -77,7 +78,7 @@ document.addEventListener('turbolinks:load', () => {
       })
   
       navLink.forEach(link =>  {
-        if (touchDevice && window.innerWidth > 651) {
+        if (touchDevice && window.innerWidth > 650) {
           link.addEventListener('touchstart', () => {
             transitionPage();
           } )
@@ -113,7 +114,15 @@ document.addEventListener('turbolinks:load', () => {
       }
     }
 
-    mobileSwipe();
-    desktopHover();
+    if (window.innerWidth > 650) {
+      desktopHover();
+    } else {
+      mobileSwipe();
+    }
+  }
+
+  if (window.location.pathname === '/contact') {
+    document.documentElement.style.setProperty(`--transform-shift`, `0vw`);
+    let vh = window.innerHeight * 0.01;
   }
 });
