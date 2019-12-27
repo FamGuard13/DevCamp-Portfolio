@@ -94,7 +94,7 @@
   margin: 0 10px 0 0;
 }
 
-.description .copy {
+.portfolio-show .description .copy {
   align-self: start;
 }
 
@@ -111,7 +111,9 @@
   margin-left: 50px;
 }
 
-.feature .copy {
+.feature .copy,
+.show .description .copy,
+.show .experience .copy {
   grid-row: 1 / -1;
 }
 
@@ -164,7 +166,6 @@
   .description .paired-image,
   .experience .paired-image,
   .feature .paired-image {
-    width: 100%;
     max-width: 575px;
     height: auto;
     min-height: auto;
@@ -191,6 +192,7 @@
   .description .paired-image,
   .experience .paired-image,
   .feature .paired-image {
+    width: 100%;
     grid-row: 2 / 3;
     grid-column: 1/-1;
     justify-self: start;
