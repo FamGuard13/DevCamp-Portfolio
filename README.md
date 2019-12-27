@@ -33,4 +33,4 @@
 - Application Tracking System
 - Job Opportunity Sharing form
 - Personal touches based on job applied for when Visiting Portfolio
-- Organize Portfolio Projects into Categories (Add/Choose new projects to display)
+- Organize Portfolio Projects into Categories (Add/Choose new projects to display

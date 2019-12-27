@@ -14,29 +14,17 @@
     </div>
   </section>
 
+  <h1 id='hobby-title'>My Hobbies</h1>
   <section class="hobbies">
 
-  <div class="hobby">
+    <% @hobbies.each do |hobby|%>
+      <div class="hobby">
+        <%= icon(hobby.icon.split[0], hobby.icon.split[1], class: 'icon-1') %>
+        <%= icon(hobby.icon.split[2], hobby.icon.split[3], class: 'icon-2') %>
+        <h2><%= hobby.title %></h2>
+      </div>
+     <%end%> 
 
-  </div>
-
-  <div class="hobby">
-
-  </div>
-
-  <div class="hobby">
-
-  </div>
-
-  <div class="hobby">
-
-  </div>
-
-  <div class="hobby">
-
-  </div>
-
-  <div class="hobby">
 
   </div>
 

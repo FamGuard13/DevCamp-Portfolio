@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @hobbies = Hobby.all
   end
 
   def contact
