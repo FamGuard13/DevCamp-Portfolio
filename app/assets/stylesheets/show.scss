@@ -111,12 +111,6 @@
   margin-left: 50px;
 }
 
-.feature .copy,
-.show .description .copy,
-.show .experience .copy {
-  grid-row: 1 / -1;
-}
-
 .details {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,15 +156,11 @@
   color: #24e0ee;
 }
 
-@media screen and (max-width: 1230px) {
-  .description .paired-image,
-  .experience .paired-image,
-  .feature .paired-image {
-    max-width: 575px;
-    height: auto;
-    min-height: auto;
-    max-height: auto;
-    align-self: center;
+@media screen and (min-width: 951px) {
+  .feature .copy,
+  .show .description .copy,
+  .show .experience .copy {
+    grid-row: 1 / -1;
   }
 }
 
@@ -193,6 +183,10 @@
   .experience .paired-image,
   .feature .paired-image {
     width: 100%;
+    height: auto;
+    min-height: auto;
+    max-height: auto;
+    align-self: center;
     grid-row: 2 / 3;
     grid-column: 1/-1;
     justify-self: start;
