@@ -15,7 +15,7 @@ class SchoolsController < ApplicationController
 
     respond_to do |format|
       if @school.save
-        format.html { redirect_to(school_show_path, notice: 'School Created') }
+        format.html { redirect_to(qualifications_path, notice: 'School Created') }
       else
         format.html { render :new }
       end

@@ -21,16 +21,19 @@
   <section class='details'>
     <h1>School Details</h1>
     <div>
+      <%= icon('fas', 'map-marker-alt')%>
       <h3>Attended Location</h3>
       <%= @school.location %>
     </div>
 
     <div>
+      <%= icon('fas', 'check')%>
       <h3>Completion Status</h3>
       <%= @school.status %>
     </div>
 
     <div>
+      <%= icon('fas', 'calendar-day')%>
       <h3>Attended</h3>
       <p><%= @school.start_date.strftime("%b, %Y") %> - 
       <%= school_end_date(@school) %>
