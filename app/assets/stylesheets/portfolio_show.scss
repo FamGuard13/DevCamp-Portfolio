@@ -20,6 +20,10 @@
   background-position: left 40%;
 }
 
+.portfolio-show .description .copy {
+  grid-row: 1/2;
+}
+
 @media screen and (min-width: 950px) {
   .feature:nth-child(even) .copy {
     grid-column: 1 / 2;
