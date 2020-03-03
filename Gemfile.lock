@@ -140,7 +140,7 @@ GEM
     petergate (1.9.1)
       activerecord (> 4.0.0)
     pg (0.21.0)
-    puma (4.3.1)
+    puma (4.3.3)
       nio4r (~> 2.0)
     rack (2.0.7)
     rack-test (1.1.0)
